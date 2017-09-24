@@ -49568,7 +49568,7 @@ require('source-map-support').install({environment: 'node'});
 /* 617 */
 /***/ (function(module, exports) {
 
-	module.exports = {"development":{"endpoint":"http://localhost:8080/graphql"},"production":{"endpoint":"http://localhost:8080/graphql"}}
+	module.exports = {"development":{"endpoint":"http://localhost:8080/graphql"},"production":{"endpoint":"https://polin-manager.herokuapp.com/graphql"}}
 
 /***/ }),
 /* 618 */

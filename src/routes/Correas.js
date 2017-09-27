@@ -38,28 +38,8 @@ export default class Correas extends React.Component {
                     <tbody>
                     <tr>
                       <td>1</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>
-                        <span className='icon-fontello-pencil-1'/>
-                        {' | '}
-                        <span className='icon-fontello-trash-8'/>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>2</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>
-                        <span className='icon-fontello-pencil-1'/>
-                        {' | '}
-                        <span className='icon-fontello-trash-8'/>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>3</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
+                      <td>AL001</td>
+                      <td>1000cm</td>
                       <td>
                         <span className='icon-fontello-pencil-1'/>
                         {' | '}

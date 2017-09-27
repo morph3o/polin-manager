@@ -46,30 +46,30 @@ export default class Estaciones extends React.Component {
                     <tbody>
                     <tr>
                       <td>1</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
+                      <td>T1</td>
+                      <td>MODELO-T1</td>
+                      <td>1</td>
+                      <td>PROVEEDOR</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>AREA 1</td>
                       <td>
                         <span className='icon-fontello-pencil-1'/>
                         {' | '}
                         <span className='icon-fontello-trash-8'/>
                         {' | '}
-                        <Link to='/estaciones/1'><span className='icon-fontello-eye-1'/></Link>
+                        <span className='icon-fontello-eye-1'/>
                       </td>
                     </tr>
                     <tr>
                       <td>2</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
+                      <td>T2</td>
+                      <td>MODELO-T2</td>
+                      <td>6</td>
+                      <td>PROVEEDOR</td>
+                      <td>6</td>
+                      <td>1</td>
+                      <td>AREA 1</td>
                       <td>
                         <span className='icon-fontello-pencil-1'/>
                         {' | '}
@@ -80,13 +80,30 @@ export default class Estaciones extends React.Component {
                     </tr>
                     <tr>
                       <td>3</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
+                      <td>T3</td>
+                      <td>MODELO-T3</td>
+                      <td>5</td>
+                      <td>PROVEEDOR</td>
+                      <td>5</td>
+                      <td>1</td>
+                      <td>AREA 1</td>
+                      <td>
+                        <span className='icon-fontello-pencil-1'/>
+                        {' | '}
+                        <span className='icon-fontello-trash-8'/>
+                        {' | '}
+                        <Link to='/estaciones/3'><span className='icon-fontello-eye-1'/></Link>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td>T4</td>
+                      <td>MODELO-T4</td>
+                      <td>1</td>
+                      <td>PROVEEDOR</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>AREA 1</td>
                       <td>
                         <span className='icon-fontello-pencil-1'/>
                         {' | '}

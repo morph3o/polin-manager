@@ -21,7 +21,7 @@ export default class Estacion extends React.Component {
             <Grid>
               <Row>
                 <Col xs={12}>
-                  <PageHeader>Estación A</PageHeader>
+                  <PageHeader>Estación T3</PageHeader>
                 </Col>
               </Row>
               <Row>
@@ -38,10 +38,10 @@ export default class Estacion extends React.Component {
                     </thead>
                     <tbody>
                       <tr>
-                        <td rowSpan='3'>1</td>
-                        <td rowSpan='3'>Table cell</td>
-                        <td>Polin 1</td>
-                        <td>Correa 1</td>
+                        <td rowSpan='3'>8</td>
+                        <td rowSpan='3'>ALIMENTADOR</td>
+                        <td>POLIN TIPO 1</td>
+                        <td>CORREA TIPO 1</td>
                         <td rowSpan='3'>
                           <span className='icon-fontello-pencil-1'/>
                           {' | '}
@@ -49,12 +49,84 @@ export default class Estacion extends React.Component {
                         </td>
                       </tr>
                       <tr>
-                        <td>Polin 2</td>
-                        <td>Correa 2</td>
+                        <td>POLIN TIPO 2</td>
+                        <td>CORREA TIPO 2</td>
                       </tr>
                       <tr>
-                        <td>Polin 3</td>
-                        <td>Correa 3</td>
+                        <td>POLIN TIPO 3</td>
+                        <td>CORREA TIPO 3</td>
+                      </tr>
+                      <tr>
+                        <td rowSpan='3'>9</td>
+                        <td rowSpan='3'>ALIMENTADOR</td>
+                        <td>POLIN TIPO 1</td>
+                        <td>CORREA TIPO 1</td>
+                        <td rowSpan='3'>
+                          <span className='icon-fontello-pencil-1'/>
+                          {' | '}
+                          <span className='icon-fontello-trash-8'/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>POLIN TIPO 2</td>
+                        <td>CORREA TIPO 2</td>
+                      </tr>
+                      <tr>
+                        <td>POLIN TIPO 3</td>
+                        <td>CORREA TIPO 3</td>
+                      </tr>
+                      <tr>
+                        <td rowSpan='3'>10</td>
+                        <td rowSpan='3'>ALIMENTADOR</td>
+                        <td>POLIN TIPO 1</td>
+                        <td>CORREA TIPO 1</td>
+                        <td rowSpan='3'>
+                          <span className='icon-fontello-pencil-1'/>
+                          {' | '}
+                          <span className='icon-fontello-trash-8'/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>POLIN TIPO 2</td>
+                        <td>CORREA TIPO 2</td>
+                      </tr>
+                      <tr>
+                        <td>POLIN TIPO 3</td>
+                        <td>CORREA TIPO 3</td>
+                      </tr>
+                      <tr>
+                        <td rowSpan='3'>11</td>
+                        <td rowSpan='3'>ALIMENTADOR</td>
+                        <td>POLIN TIPO 1</td>
+                        <td>CORREA TIPO 1</td>
+                        <td rowSpan='3'>
+                          <span className='icon-fontello-pencil-1'/>
+                          {' | '}
+                          <span className='icon-fontello-trash-8'/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>POLIN TIPO 2</td>
+                        <td>CORREA TIPO 2</td>
+                      </tr>
+                      <tr>
+                        <td>POLIN TIPO 3</td>
+                        <td>CORREA TIPO 3</td>
+                      </tr>
+                      <tr>
+                        <td rowSpan='2'>12</td>
+                        <td rowSpan='2'>ALIMENTADOR</td>
+                        <td>POLIN TIPO 1</td>
+                        <td>CORREA TIPO 1</td>
+                        <td rowSpan='3'>
+                          <span className='icon-fontello-pencil-1'/>
+                          {' | '}
+                          <span className='icon-fontello-trash-8'/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>POLIN TIPO 2</td>
+                        <td>CORREA TIPO 2</td>
                       </tr>
                     </tbody>
                   </Table>

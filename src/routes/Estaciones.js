@@ -33,26 +33,20 @@ export default class Estaciones extends React.Component {
                     <thead>
                     <tr>
                       <th>ID</th>
+                      <th>Descripción</th>
                       <th>Tipo</th>
-                      <th>Modelo</th>
-                      <th># Posiciones</th>
-                      <th>Proveedor</th>
-                      <th># Polines Compatibles</th>
-                      <th># Correas compatibles</th>
-                      <th>Coordenadas</th>
+                      <th>Ancho</th>
+                      <th>Posiciones</th>
                       <th>Acciones</th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr>
                       <td>1</td>
-                      <td>T1</td>
-                      <td>MODELO-T1</td>
-                      <td>1</td>
-                      <td>PROVEEDOR</td>
-                      <td>1</td>
-                      <td>1</td>
-                      <td>AREA 1</td>
+                      <td>ESTACION CARGA FIJA OVERLAND 35°, 1800mm, 3 POLINES IGUALES 600mm, TIPO FMC 1095050</td>
+                      <td>CARGA</td>
+                      <td>1800</td>
+                      <td>3</td>
                       <td>
                         <span className='icon-fontello-pencil-1'/>
                         {' | '}
@@ -63,13 +57,10 @@ export default class Estaciones extends React.Component {
                     </tr>
                     <tr>
                       <td>2</td>
-                      <td>T2</td>
-                      <td>MODELO-T2</td>
-                      <td>6</td>
-                      <td>PROVEEDOR</td>
-                      <td>6</td>
-                      <td>1</td>
-                      <td>AREA 1</td>
+                      <td>ESTACION CARGA ANGULO AJUSTABLE OVERLAND, 1800mm, 3 POLINES IGUALES 600mm, TIPO FMC 1095051</td>
+                      <td>CARGA</td>
+                      <td>1800</td>
+                      <td>3</td>
                       <td>
                         <span className='icon-fontello-pencil-1'/>
                         {' | '}
@@ -80,30 +71,38 @@ export default class Estaciones extends React.Component {
                     </tr>
                     <tr>
                       <td>3</td>
-                      <td>T3</td>
-                      <td>MODELO-T3</td>
-                      <td>5</td>
-                      <td>PROVEEDOR</td>
-                      <td>5</td>
-                      <td>1</td>
-                      <td>AREA 1</td>
+                      <td>ESTACION CARGA AUTOALINEANTE OVERLAND, 1800mm, 3 POLINES IGUALES 600mm, TIPO FMC 1095052</td>
+                      <td>CARGA</td>
+                      <td>1800</td>
+                      <td>3</td>
                       <td>
                         <span className='icon-fontello-pencil-1'/>
                         {' | '}
                         <span className='icon-fontello-trash-8'/>
                         {' | '}
-                        <Link to='/estaciones/3'><span className='icon-fontello-eye-1'/></Link>
+                        <span className='icon-fontello-eye-1'/>
                       </td>
                     </tr>
                     <tr>
                       <td>4</td>
-                      <td>T4</td>
-                      <td>MODELO-T4</td>
+                      <td>ESTACION RETORNO FIJA 15°, 1800mm, 2 POLINES IGUALES 1000mm, TIPO FMC 1095060</td>
+                      <td>RETORNO</td>
+                      <td>1800</td>
+                      <td>2</td>
+                      <td>
+                        <span className='icon-fontello-pencil-1'/>
+                        {' | '}
+                        <span className='icon-fontello-trash-8'/>
+                        {' | '}
+                        <span className='icon-fontello-eye-1'/>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>5</td>
+                      <td>BASE POLEA APERTURA 2000mm</td>
+                      <td>POLEA</td>
+                      <td>2000</td>
                       <td>1</td>
-                      <td>PROVEEDOR</td>
-                      <td>1</td>
-                      <td>1</td>
-                      <td>AREA 1</td>
                       <td>
                         <span className='icon-fontello-pencil-1'/>
                         {' | '}

@@ -30,6 +30,12 @@ class ApplicationSidebar extends React.Component {
                   <div className='sidebar-header'>Menu</div>
 
                   <SidebarNavItem glyph='icon-fontello-gauge' name='Dashboard' href='/' />
+                  <SidebarNavItem glyph='icon-fontello-gauge' name='Proyectos'>
+                    <SidebarNav>
+                      <SidebarNavItem glyph='icon-fontello-list-1' name='Ver Proyectos' href='/proyectos' />
+                      <SidebarNavItem glyph='icon-fontello-plus-squared-1' name='Ingresar Proyecto' href='' />
+                    </SidebarNav>
+                  </SidebarNavItem>
                   <SidebarNavItem glyph='icon-fontello-gauge' name='Estaciones'>
                     <SidebarNav>
                       <SidebarNavItem glyph='icon-fontello-list-1' name='Ver Estaciones' href='/estaciones' />

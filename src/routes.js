@@ -13,7 +13,8 @@ import Footer from './common/footer';
 /* Pages */
 
 import Home from './routes/Home';
-import Home2 from './routes/Home2';
+import Proyecto from './routes/Proyecto'
+import Proyectos from './routes/Proyectos';
 import Polines from './routes/Polines';
 import Correas from './routes/Correas';
 import Estaciones from './routes/Estaciones';
@@ -43,7 +44,8 @@ class App extends React.Component {
 const routes = (
   <Route path='/' component={App}>
     <IndexRoute component={Home} />
-    <Route path='/home2' component={Home2} />
+    <Route path='/proyectos' component={Proyectos} />
+    <Route path='/proyecto' component={Proyecto} />
     <Route path='/polines' component={Polines} />
     <Route path='/correas' component={Correas} />
     <Route path='/estaciones' component={Estaciones} />

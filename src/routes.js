@@ -49,7 +49,7 @@ const routes = (
     <Route path='/polines' component={Polines} />
     <Route path='/correas' component={Correas} />
     <Route path='/estaciones' component={Estaciones} />
-    <Route path='/estaciones/3' component={Estacion} />
+    <Route path='/estacion' component={Estacion} />
   </Route>
 );
 

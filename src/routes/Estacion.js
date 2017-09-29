@@ -29,104 +29,50 @@ export default class Estacion extends React.Component {
                   <Table responsive>
                     <thead>
                       <tr>
-                        <th>Posición</th>
+                        <th>ID</th>
+                        <th>ID Estación</th>
+                        <th>Posicion</th>
+                        <th>Descripción</th>
                         <th>Tipo</th>
-                        <th>Polines Compatibles</th>
-                        <th>Correas compatibles</th>
                         <th>Acciones</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td rowSpan='3'>8</td>
-                        <td rowSpan='3'>ALIMENTADOR</td>
-                        <td>POLIN TIPO 1</td>
-                        <td>CORREA TIPO 1</td>
-                        <td rowSpan='3'>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>IZQUIERDO</td>
+                        <td>1</td>
+                        <td>
                           <span className='icon-fontello-pencil-1'/>
                           {' | '}
                           <span className='icon-fontello-trash-8'/>
                         </td>
                       </tr>
                       <tr>
-                        <td>POLIN TIPO 2</td>
-                        <td>CORREA TIPO 2</td>
-                      </tr>
-                      <tr>
-                        <td>POLIN TIPO 3</td>
-                        <td>CORREA TIPO 3</td>
-                      </tr>
-                      <tr>
-                        <td rowSpan='3'>9</td>
-                        <td rowSpan='3'>ALIMENTADOR</td>
-                        <td>POLIN TIPO 1</td>
-                        <td>CORREA TIPO 1</td>
-                        <td rowSpan='3'>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>CENTRO</td>
+                        <td>1</td>
+                        <td>
                           <span className='icon-fontello-pencil-1'/>
                           {' | '}
                           <span className='icon-fontello-trash-8'/>
                         </td>
                       </tr>
                       <tr>
-                        <td>POLIN TIPO 2</td>
-                        <td>CORREA TIPO 2</td>
-                      </tr>
-                      <tr>
-                        <td>POLIN TIPO 3</td>
-                        <td>CORREA TIPO 3</td>
-                      </tr>
-                      <tr>
-                        <td rowSpan='3'>10</td>
-                        <td rowSpan='3'>ALIMENTADOR</td>
-                        <td>POLIN TIPO 1</td>
-                        <td>CORREA TIPO 1</td>
-                        <td rowSpan='3'>
+                        <td>3</td>
+                        <td>1</td>
+                        <td>3</td>
+                        <td>DERECHO</td>
+                        <td>1</td>
+                        <td>
                           <span className='icon-fontello-pencil-1'/>
                           {' | '}
                           <span className='icon-fontello-trash-8'/>
                         </td>
-                      </tr>
-                      <tr>
-                        <td>POLIN TIPO 2</td>
-                        <td>CORREA TIPO 2</td>
-                      </tr>
-                      <tr>
-                        <td>POLIN TIPO 3</td>
-                        <td>CORREA TIPO 3</td>
-                      </tr>
-                      <tr>
-                        <td rowSpan='3'>11</td>
-                        <td rowSpan='3'>ALIMENTADOR</td>
-                        <td>POLIN TIPO 1</td>
-                        <td>CORREA TIPO 1</td>
-                        <td rowSpan='3'>
-                          <span className='icon-fontello-pencil-1'/>
-                          {' | '}
-                          <span className='icon-fontello-trash-8'/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>POLIN TIPO 2</td>
-                        <td>CORREA TIPO 2</td>
-                      </tr>
-                      <tr>
-                        <td>POLIN TIPO 3</td>
-                        <td>CORREA TIPO 3</td>
-                      </tr>
-                      <tr>
-                        <td rowSpan='2'>12</td>
-                        <td rowSpan='2'>ALIMENTADOR</td>
-                        <td>POLIN TIPO 1</td>
-                        <td>CORREA TIPO 1</td>
-                        <td rowSpan='3'>
-                          <span className='icon-fontello-pencil-1'/>
-                          {' | '}
-                          <span className='icon-fontello-trash-8'/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>POLIN TIPO 2</td>
-                        <td>CORREA TIPO 2</td>
                       </tr>
                     </tbody>
                   </Table>

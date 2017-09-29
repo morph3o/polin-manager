@@ -52,7 +52,7 @@ export default class Estaciones extends React.Component {
                         {' | '}
                         <span className='icon-fontello-trash-8'/>
                         {' | '}
-                        <span className='icon-fontello-eye-1'/>
+                        <Link to={'/estacion'}><span className='icon-fontello-eye-1'/></Link>
                       </td>
                     </tr>
                     <tr>

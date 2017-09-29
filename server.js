@@ -54,7 +54,7 @@ require('source-map-support').install({environment: 'node'});
 /* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	'use strict';var _stringify=__webpack_require__(2);var _stringify2=_interopRequireDefault(_stringify);var _path=__webpack_require__(5);var _path2=_interopRequireDefault(_path);var _express=__webpack_require__(6);var _express2=_interopRequireDefault(_express);var _compression=__webpack_require__(7);var _compression2=_interopRequireDefault(_compression);var _cookieParser=__webpack_require__(8);var _cookieParser2=_interopRequireDefault(_cookieParser);var _expressGraphql=__webpack_require__(9);var _expressGraphql2=_interopRequireDefault(_expressGraphql);var _react=__webpack_require__(10);var _react2=_interopRequireDefault(_react);var _server=__webpack_require__(11);var _server2=_interopRequireDefault(_server);var _routes=__webpack_require__(175);var _routes2=_interopRequireDefault(_routes);var _reduxRouter=__webpack_require__(623);var _RubixAssetMiddleware=__webpack_require__(649);var _RubixAssetMiddleware2=_interopRequireDefault(_RubixAssetMiddleware);var _schema=__webpack_require__(650);var _schema2=_interopRequireDefault(_schema);var _reducers=__webpack_require__(653);var _reducers2=_interopRequireDefault(_reducers);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}(0,_reduxRouter.setupReducers)(_reducers2.default);var port=process.env.PORT||8080;var app=(0,_express2.default)();app.use((0,_compression2.default)());app.use((0,_cookieParser2.default)());app.use(_express2.default.static(_path2.default.join(process.cwd(),'public')));app.set('views',_path2.default.join(process.cwd(),'views'));app.set('view engine','pug');function renderHTML(req,res){(0,_reduxRouter.renderHTMLString)(_routes2.default,req,function(error,redirectLocation,data){if(error){if(error.message==='Not found'){res.status(404).send(error.message);}else{res.status(500).send(error.message);}}else if(redirectLocation){res.redirect(302,redirectLocation.pathname+redirectLocation.search);}else{res.render('index',{content:data.content,data:(0,_stringify2.default)(data.data).replace(/\//g,'\\/')});}});}app.use('/graphql',(0,_expressGraphql2.default)({schema:_schema2.default,pretty:true,graphiql:true}));app.get('*',(0,_RubixAssetMiddleware2.default)('ltr'),function(req,res,next){renderHTML(req,res);});app.listen(port,function(){console.log('Node.js app is running at http://localhost:'+port+'/');});
+	'use strict';var _stringify=__webpack_require__(2);var _stringify2=_interopRequireDefault(_stringify);var _path=__webpack_require__(5);var _path2=_interopRequireDefault(_path);var _express=__webpack_require__(6);var _express2=_interopRequireDefault(_express);var _compression=__webpack_require__(7);var _compression2=_interopRequireDefault(_compression);var _cookieParser=__webpack_require__(8);var _cookieParser2=_interopRequireDefault(_cookieParser);var _expressGraphql=__webpack_require__(9);var _expressGraphql2=_interopRequireDefault(_expressGraphql);var _react=__webpack_require__(10);var _react2=_interopRequireDefault(_react);var _server=__webpack_require__(11);var _server2=_interopRequireDefault(_server);var _routes=__webpack_require__(175);var _routes2=_interopRequireDefault(_routes);var _reduxRouter=__webpack_require__(624);var _RubixAssetMiddleware=__webpack_require__(650);var _RubixAssetMiddleware2=_interopRequireDefault(_RubixAssetMiddleware);var _schema=__webpack_require__(651);var _schema2=_interopRequireDefault(_schema);var _reducers=__webpack_require__(654);var _reducers2=_interopRequireDefault(_reducers);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}(0,_reduxRouter.setupReducers)(_reducers2.default);var port=process.env.PORT||8080;var app=(0,_express2.default)();app.use((0,_compression2.default)());app.use((0,_cookieParser2.default)());app.use(_express2.default.static(_path2.default.join(process.cwd(),'public')));app.set('views',_path2.default.join(process.cwd(),'views'));app.set('view engine','pug');function renderHTML(req,res){(0,_reduxRouter.renderHTMLString)(_routes2.default,req,function(error,redirectLocation,data){if(error){if(error.message==='Not found'){res.status(404).send(error.message);}else{res.status(500).send(error.message);}}else if(redirectLocation){res.redirect(302,redirectLocation.pathname+redirectLocation.search);}else{res.render('index',{content:data.content,data:(0,_stringify2.default)(data.data).replace(/\//g,'\\/')});}});}app.use('/graphql',(0,_expressGraphql2.default)({schema:_schema2.default,pretty:true,graphiql:true}));app.get('*',(0,_RubixAssetMiddleware2.default)('ltr'),function(req,res,next){renderHTML(req,res);});app.listen(port,function(){console.log('Node.js app is running at http://localhost:'+port+'/');});
 
 /***/ }),
 /* 2 */
@@ -19940,7 +19940,7 @@ require('source-map-support').install({environment: 'node'});
 /* 175 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	'use strict';exports.__esModule=true;var _classCallCheck2=__webpack_require__(176);var _classCallCheck3=_interopRequireDefault(_classCallCheck2);var _possibleConstructorReturn2=__webpack_require__(177);var _possibleConstructorReturn3=_interopRequireDefault(_possibleConstructorReturn2);var _inherits2=__webpack_require__(244);var _inherits3=_interopRequireDefault(_inherits2);var _react=__webpack_require__(10);var _react2=_interopRequireDefault(_react);var _classnames=__webpack_require__(252);var _classnames2=_interopRequireDefault(_classnames);var _reactRouter=__webpack_require__(253);var _rubix=__webpack_require__(254);var _sidebar=__webpack_require__(607);var _sidebar2=_interopRequireDefault(_sidebar);var _header=__webpack_require__(608);var _header2=_interopRequireDefault(_header);var _footer=__webpack_require__(609);var _footer2=_interopRequireDefault(_footer);var _Home=__webpack_require__(610);var _Home2=_interopRequireDefault(_Home);var _Home3=__webpack_require__(618);var _Home4=_interopRequireDefault(_Home3);var _Polines=__webpack_require__(619);var _Polines2=_interopRequireDefault(_Polines);var _Correas=__webpack_require__(620);var _Correas2=_interopRequireDefault(_Correas);var _Estaciones=__webpack_require__(621);var _Estaciones2=_interopRequireDefault(_Estaciones);var _Estacion=__webpack_require__(622);var _Estacion2=_interopRequireDefault(_Estacion);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}/* Pages */var App=function(_React$Component){(0,_inherits3.default)(App,_React$Component);function App(){(0,_classCallCheck3.default)(this,App);return(0,_possibleConstructorReturn3.default)(this,_React$Component.apply(this,arguments));}App.prototype.render=function render(){return _react2.default.createElement(_rubix.MainContainer,this.props,_react2.default.createElement(_sidebar2.default,null),_react2.default.createElement(_header2.default,null),_react2.default.createElement('div',{id:'body'},_react2.default.createElement(_rubix.Grid,null,_react2.default.createElement(_rubix.Row,null,_react2.default.createElement(_rubix.Col,{xs:12},this.props.children)))),_react2.default.createElement(_footer2.default,null));};return App;}(_react2.default.Component);/* Common Components */var routes=_react2.default.createElement(_reactRouter.Route,{path:'/',component:App},_react2.default.createElement(_reactRouter.IndexRoute,{component:_Home2.default}),_react2.default.createElement(_reactRouter.Route,{path:'/home2',component:_Home4.default}),_react2.default.createElement(_reactRouter.Route,{path:'/polines',component:_Polines2.default}),_react2.default.createElement(_reactRouter.Route,{path:'/correas',component:_Correas2.default}),_react2.default.createElement(_reactRouter.Route,{path:'/estaciones',component:_Estaciones2.default}),_react2.default.createElement(_reactRouter.Route,{path:'/estaciones/3',component:_Estacion2.default}));exports.default=routes;
+	'use strict';exports.__esModule=true;var _classCallCheck2=__webpack_require__(176);var _classCallCheck3=_interopRequireDefault(_classCallCheck2);var _possibleConstructorReturn2=__webpack_require__(177);var _possibleConstructorReturn3=_interopRequireDefault(_possibleConstructorReturn2);var _inherits2=__webpack_require__(244);var _inherits3=_interopRequireDefault(_inherits2);var _react=__webpack_require__(10);var _react2=_interopRequireDefault(_react);var _classnames=__webpack_require__(252);var _classnames2=_interopRequireDefault(_classnames);var _reactRouter=__webpack_require__(253);var _rubix=__webpack_require__(254);var _sidebar=__webpack_require__(607);var _sidebar2=_interopRequireDefault(_sidebar);var _header=__webpack_require__(608);var _header2=_interopRequireDefault(_header);var _footer=__webpack_require__(609);var _footer2=_interopRequireDefault(_footer);var _Home=__webpack_require__(610);var _Home2=_interopRequireDefault(_Home);var _Proyecto=__webpack_require__(618);var _Proyecto2=_interopRequireDefault(_Proyecto);var _Proyectos=__webpack_require__(619);var _Proyectos2=_interopRequireDefault(_Proyectos);var _Polines=__webpack_require__(620);var _Polines2=_interopRequireDefault(_Polines);var _Correas=__webpack_require__(621);var _Correas2=_interopRequireDefault(_Correas);var _Estaciones=__webpack_require__(622);var _Estaciones2=_interopRequireDefault(_Estaciones);var _Estacion=__webpack_require__(623);var _Estacion2=_interopRequireDefault(_Estacion);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}/* Common Components */var App=function(_React$Component){(0,_inherits3.default)(App,_React$Component);function App(){(0,_classCallCheck3.default)(this,App);return(0,_possibleConstructorReturn3.default)(this,_React$Component.apply(this,arguments));}App.prototype.render=function render(){return _react2.default.createElement(_rubix.MainContainer,this.props,_react2.default.createElement(_sidebar2.default,null),_react2.default.createElement(_header2.default,null),_react2.default.createElement('div',{id:'body'},_react2.default.createElement(_rubix.Grid,null,_react2.default.createElement(_rubix.Row,null,_react2.default.createElement(_rubix.Col,{xs:12},this.props.children)))),_react2.default.createElement(_footer2.default,null));};return App;}(_react2.default.Component);/* Pages */var routes=_react2.default.createElement(_reactRouter.Route,{path:'/',component:App},_react2.default.createElement(_reactRouter.IndexRoute,{component:_Home2.default}),_react2.default.createElement(_reactRouter.Route,{path:'/proyectos',component:_Proyectos2.default}),_react2.default.createElement(_reactRouter.Route,{path:'/proyecto',component:_Proyecto2.default}),_react2.default.createElement(_reactRouter.Route,{path:'/polines',component:_Polines2.default}),_react2.default.createElement(_reactRouter.Route,{path:'/correas',component:_Correas2.default}),_react2.default.createElement(_reactRouter.Route,{path:'/estaciones',component:_Estaciones2.default}),_react2.default.createElement(_reactRouter.Route,{path:'/estacion',component:_Estacion2.default}));exports.default=routes;
 
 /***/ }),
 /* 176 */
@@ -49506,7 +49506,7 @@ require('source-map-support').install({environment: 'node'});
 /* 607 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	'use strict';exports.__esModule=true;exports.default=undefined;var _classCallCheck2=__webpack_require__(176);var _classCallCheck3=_interopRequireDefault(_classCallCheck2);var _possibleConstructorReturn2=__webpack_require__(177);var _possibleConstructorReturn3=_interopRequireDefault(_possibleConstructorReturn2);var _inherits2=__webpack_require__(244);var _inherits3=_interopRequireDefault(_inherits2);var _class,_class2;var _react=__webpack_require__(10);var _react2=_interopRequireDefault(_react);var _rubix=__webpack_require__(254);var _reactRouter=__webpack_require__(253);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var ApplicationSidebar=(0,_reactRouter.withRouter)(_class=function(_React$Component){(0,_inherits3.default)(ApplicationSidebar,_React$Component);function ApplicationSidebar(){(0,_classCallCheck3.default)(this,ApplicationSidebar);return(0,_possibleConstructorReturn3.default)(this,_React$Component.apply(this,arguments));}ApplicationSidebar.prototype.handleChange=function handleChange(e){this._nav.search(e.target.value);};ApplicationSidebar.prototype.render=function render(){var _this2=this;return _react2.default.createElement('div',null,_react2.default.createElement(_rubix.Grid,null,_react2.default.createElement(_rubix.Row,null,_react2.default.createElement(_rubix.Col,{xs:12},_react2.default.createElement(_rubix.FormControl,{type:'text',placeholder:'Search...',onChange:this.handleChange.bind(this),className:'sidebar-search',style:{border:'none',background:'none',margin:'10px 0 0 0',borderBottom:'1px solid #666',color:'white'}}),_react2.default.createElement('div',{className:'sidebar-nav-container'},_react2.default.createElement(_rubix.SidebarNav,{style:{marginBottom:0},ref:function ref(c){return _this2._nav=c;}},_react2.default.createElement('div',{className:'sidebar-header'},'Menu'),_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-gauge',name:'Dashboard',href:'/'}),_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-gauge',name:'Estaciones'},_react2.default.createElement(_rubix.SidebarNav,null,_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-list-1',name:'Ver Estaciones',href:'/estaciones'}),_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-plus-squared-1',name:'Ingresar Estaci\xF3n',href:''}))),_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-gauge',name:'Polines'},_react2.default.createElement(_rubix.SidebarNav,null,_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-list-1',name:'Ver Polines',href:'/polines'}),_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-plus-squared-1',name:'Ingresar Polin',href:''}))),_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-gauge',name:'Correas'},_react2.default.createElement(_rubix.SidebarNav,null,_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-list-1',name:'Ver Correas',href:'/correas'}),_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-plus-squared-1',name:'Ingresar Correa',href:''}))),_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-gauge',name:'Acciones'},_react2.default.createElement(_rubix.SidebarNav,null,_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-gauge',name:'Cambiar Polin',href:''}),_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-gauge',name:'Cambiar Estacion',href:''}),_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-gauge',name:'Inspeccionar Polin',href:''}))),_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-gauge',name:'Reportes'},_react2.default.createElement(_rubix.SidebarNav,null,_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-gauge',name:'Cambios'},_react2.default.createElement(_rubix.SidebarNav,null,_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-gauge',name:'Por correa',href:''}),_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-gauge',name:'Por posici\xF3n',href:''}),_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-gauge',name:'Por tipo de pol\xEDn',href:''}))),_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-gauge',name:'Duraci\xF3n polines por \xE1rea',href:''})))))))));};return ApplicationSidebar;}(_react2.default.Component))||_class;var DummySidebar=function(_React$Component2){(0,_inherits3.default)(DummySidebar,_React$Component2);function DummySidebar(){(0,_classCallCheck3.default)(this,DummySidebar);return(0,_possibleConstructorReturn3.default)(this,_React$Component2.apply(this,arguments));}DummySidebar.prototype.render=function render(){return _react2.default.createElement(_rubix.Grid,null,_react2.default.createElement(_rubix.Row,null,_react2.default.createElement(_rubix.Col,{xs:12},_react2.default.createElement('div',{className:'sidebar-header'},'DUMMY SIDEBAR'),_react2.default.createElement(_rubix.LoremIpsum,{query:'1p'}))));};return DummySidebar;}(_react2.default.Component);var SidebarContainer=(0,_reactRouter.withRouter)(_class2=function(_React$Component3){(0,_inherits3.default)(SidebarContainer,_React$Component3);function SidebarContainer(){(0,_classCallCheck3.default)(this,SidebarContainer);return(0,_possibleConstructorReturn3.default)(this,_React$Component3.apply(this,arguments));}SidebarContainer.prototype.render=function render(){return _react2.default.createElement('div',{id:'sidebar'},_react2.default.createElement('div',{id:'avatar'},_react2.default.createElement(_rubix.Grid,null,_react2.default.createElement(_rubix.Row,{className:'fg-white'},_react2.default.createElement(_rubix.Col,{xs:4,collapseRight:true},_react2.default.createElement('img',{src:'/imgs/app/avatars/avatar0.png',width:'40',height:'40'})),_react2.default.createElement(_rubix.Col,{xs:8,collapseLeft:true,id:'avatar-col'},_react2.default.createElement('div',{style:{top:23,fontSize:16,lineHeight:1,position:'relative'}},'Anna Sanchez'),_react2.default.createElement('div',null,_react2.default.createElement(_rubix.Progress,{id:'demo-progress',value:30,color:'#ffffff'}),_react2.default.createElement('a',{href:'#'},_react2.default.createElement(_rubix.Icon,{id:'demo-icon',bundle:'fontello',glyph:'lock-5'}))))))),_react2.default.createElement(_rubix.SidebarControls,null,_react2.default.createElement(_rubix.SidebarControlBtn,{bundle:'fontello',glyph:'docs',sidebar:0}),_react2.default.createElement(_rubix.SidebarControlBtn,{bundle:'fontello',glyph:'chat-1',sidebar:1}),_react2.default.createElement(_rubix.SidebarControlBtn,{bundle:'fontello',glyph:'chart-pie-2',sidebar:2}),_react2.default.createElement(_rubix.SidebarControlBtn,{bundle:'fontello',glyph:'th-list-2',sidebar:3}),_react2.default.createElement(_rubix.SidebarControlBtn,{bundle:'fontello',glyph:'bell-5',sidebar:4})),_react2.default.createElement('div',{id:'sidebar-container'},_react2.default.createElement(_rubix.Sidebar,{sidebar:0},_react2.default.createElement(ApplicationSidebar,null)),_react2.default.createElement(_rubix.Sidebar,{sidebar:1},_react2.default.createElement(DummySidebar,null)),_react2.default.createElement(_rubix.Sidebar,{sidebar:2},_react2.default.createElement(DummySidebar,null)),_react2.default.createElement(_rubix.Sidebar,{sidebar:3},_react2.default.createElement(DummySidebar,null)),_react2.default.createElement(_rubix.Sidebar,{sidebar:4},_react2.default.createElement(DummySidebar,null))));};return SidebarContainer;}(_react2.default.Component))||_class2;exports.default=SidebarContainer;
+	'use strict';exports.__esModule=true;exports.default=undefined;var _classCallCheck2=__webpack_require__(176);var _classCallCheck3=_interopRequireDefault(_classCallCheck2);var _possibleConstructorReturn2=__webpack_require__(177);var _possibleConstructorReturn3=_interopRequireDefault(_possibleConstructorReturn2);var _inherits2=__webpack_require__(244);var _inherits3=_interopRequireDefault(_inherits2);var _class,_class2;var _react=__webpack_require__(10);var _react2=_interopRequireDefault(_react);var _rubix=__webpack_require__(254);var _reactRouter=__webpack_require__(253);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var ApplicationSidebar=(0,_reactRouter.withRouter)(_class=function(_React$Component){(0,_inherits3.default)(ApplicationSidebar,_React$Component);function ApplicationSidebar(){(0,_classCallCheck3.default)(this,ApplicationSidebar);return(0,_possibleConstructorReturn3.default)(this,_React$Component.apply(this,arguments));}ApplicationSidebar.prototype.handleChange=function handleChange(e){this._nav.search(e.target.value);};ApplicationSidebar.prototype.render=function render(){var _this2=this;return _react2.default.createElement('div',null,_react2.default.createElement(_rubix.Grid,null,_react2.default.createElement(_rubix.Row,null,_react2.default.createElement(_rubix.Col,{xs:12},_react2.default.createElement(_rubix.FormControl,{type:'text',placeholder:'Search...',onChange:this.handleChange.bind(this),className:'sidebar-search',style:{border:'none',background:'none',margin:'10px 0 0 0',borderBottom:'1px solid #666',color:'white'}}),_react2.default.createElement('div',{className:'sidebar-nav-container'},_react2.default.createElement(_rubix.SidebarNav,{style:{marginBottom:0},ref:function ref(c){return _this2._nav=c;}},_react2.default.createElement('div',{className:'sidebar-header'},'Menu'),_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-gauge',name:'Dashboard',href:'/'}),_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-gauge',name:'Proyectos'},_react2.default.createElement(_rubix.SidebarNav,null,_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-list-1',name:'Ver Proyectos',href:'/proyectos'}),_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-plus-squared-1',name:'Ingresar Proyecto',href:''}))),_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-gauge',name:'Estaciones'},_react2.default.createElement(_rubix.SidebarNav,null,_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-list-1',name:'Ver Estaciones',href:'/estaciones'}),_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-plus-squared-1',name:'Ingresar Estaci\xF3n',href:''}))),_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-gauge',name:'Polines'},_react2.default.createElement(_rubix.SidebarNav,null,_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-list-1',name:'Ver Polines',href:'/polines'}),_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-plus-squared-1',name:'Ingresar Polin',href:''}))),_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-gauge',name:'Correas'},_react2.default.createElement(_rubix.SidebarNav,null,_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-list-1',name:'Ver Correas',href:'/correas'}),_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-plus-squared-1',name:'Ingresar Correa',href:''}))),_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-gauge',name:'Acciones'},_react2.default.createElement(_rubix.SidebarNav,null,_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-gauge',name:'Cambiar Polin',href:''}),_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-gauge',name:'Cambiar Estacion',href:''}),_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-gauge',name:'Inspeccionar Polin',href:''}))),_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-gauge',name:'Reportes'},_react2.default.createElement(_rubix.SidebarNav,null,_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-gauge',name:'Cambios'},_react2.default.createElement(_rubix.SidebarNav,null,_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-gauge',name:'Por correa',href:''}),_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-gauge',name:'Por posici\xF3n',href:''}),_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-gauge',name:'Por tipo de pol\xEDn',href:''}))),_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-gauge',name:'Duraci\xF3n polines por \xE1rea',href:''})))))))));};return ApplicationSidebar;}(_react2.default.Component))||_class;var DummySidebar=function(_React$Component2){(0,_inherits3.default)(DummySidebar,_React$Component2);function DummySidebar(){(0,_classCallCheck3.default)(this,DummySidebar);return(0,_possibleConstructorReturn3.default)(this,_React$Component2.apply(this,arguments));}DummySidebar.prototype.render=function render(){return _react2.default.createElement(_rubix.Grid,null,_react2.default.createElement(_rubix.Row,null,_react2.default.createElement(_rubix.Col,{xs:12},_react2.default.createElement('div',{className:'sidebar-header'},'DUMMY SIDEBAR'),_react2.default.createElement(_rubix.LoremIpsum,{query:'1p'}))));};return DummySidebar;}(_react2.default.Component);var SidebarContainer=(0,_reactRouter.withRouter)(_class2=function(_React$Component3){(0,_inherits3.default)(SidebarContainer,_React$Component3);function SidebarContainer(){(0,_classCallCheck3.default)(this,SidebarContainer);return(0,_possibleConstructorReturn3.default)(this,_React$Component3.apply(this,arguments));}SidebarContainer.prototype.render=function render(){return _react2.default.createElement('div',{id:'sidebar'},_react2.default.createElement('div',{id:'avatar'},_react2.default.createElement(_rubix.Grid,null,_react2.default.createElement(_rubix.Row,{className:'fg-white'},_react2.default.createElement(_rubix.Col,{xs:4,collapseRight:true},_react2.default.createElement('img',{src:'/imgs/app/avatars/avatar0.png',width:'40',height:'40'})),_react2.default.createElement(_rubix.Col,{xs:8,collapseLeft:true,id:'avatar-col'},_react2.default.createElement('div',{style:{top:23,fontSize:16,lineHeight:1,position:'relative'}},'Anna Sanchez'),_react2.default.createElement('div',null,_react2.default.createElement(_rubix.Progress,{id:'demo-progress',value:30,color:'#ffffff'}),_react2.default.createElement('a',{href:'#'},_react2.default.createElement(_rubix.Icon,{id:'demo-icon',bundle:'fontello',glyph:'lock-5'}))))))),_react2.default.createElement(_rubix.SidebarControls,null,_react2.default.createElement(_rubix.SidebarControlBtn,{bundle:'fontello',glyph:'docs',sidebar:0}),_react2.default.createElement(_rubix.SidebarControlBtn,{bundle:'fontello',glyph:'chat-1',sidebar:1}),_react2.default.createElement(_rubix.SidebarControlBtn,{bundle:'fontello',glyph:'chart-pie-2',sidebar:2}),_react2.default.createElement(_rubix.SidebarControlBtn,{bundle:'fontello',glyph:'th-list-2',sidebar:3}),_react2.default.createElement(_rubix.SidebarControlBtn,{bundle:'fontello',glyph:'bell-5',sidebar:4})),_react2.default.createElement('div',{id:'sidebar-container'},_react2.default.createElement(_rubix.Sidebar,{sidebar:0},_react2.default.createElement(ApplicationSidebar,null)),_react2.default.createElement(_rubix.Sidebar,{sidebar:1},_react2.default.createElement(DummySidebar,null)),_react2.default.createElement(_rubix.Sidebar,{sidebar:2},_react2.default.createElement(DummySidebar,null)),_react2.default.createElement(_rubix.Sidebar,{sidebar:3},_react2.default.createElement(DummySidebar,null)),_react2.default.createElement(_rubix.Sidebar,{sidebar:4},_react2.default.createElement(DummySidebar,null))));};return SidebarContainer;}(_react2.default.Component))||_class2;exports.default=SidebarContainer;
 
 /***/ }),
 /* 608 */
@@ -49574,34 +49574,40 @@ require('source-map-support').install({environment: 'node'});
 /* 618 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	'use strict';exports.__esModule=true;exports.default=undefined;var _classCallCheck2=__webpack_require__(176);var _classCallCheck3=_interopRequireDefault(_classCallCheck2);var _possibleConstructorReturn2=__webpack_require__(177);var _possibleConstructorReturn3=_interopRequireDefault(_possibleConstructorReturn2);var _inherits2=__webpack_require__(244);var _inherits3=_interopRequireDefault(_inherits2);var _dec,_class;var _react=__webpack_require__(10);var _react2=_interopRequireDefault(_react);var _reactRedux=__webpack_require__(611);var _actions=__webpack_require__(612);var _actions2=_interopRequireDefault(_actions);var _rubix=__webpack_require__(254);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var Home=(_dec=(0,_reactRedux.connect)(function(state){return state;}),_dec(_class=function(_React$Component){(0,_inherits3.default)(Home,_React$Component);function Home(){(0,_classCallCheck3.default)(this,Home);return(0,_possibleConstructorReturn3.default)(this,_React$Component.apply(this,arguments));}Home.fetchData=function fetchData(store){return store.dispatch(_actions2.default.getGreeting('Greetings from Rubix :)'));};Home.prototype.render=function render(){return _react2.default.createElement(_rubix.PanelContainer,null,_react2.default.createElement(_rubix.Panel,null,_react2.default.createElement(_rubix.PanelBody,null,_react2.default.createElement(_rubix.Grid,null,_react2.default.createElement(_rubix.Row,null,_react2.default.createElement(_rubix.Col,{xs:12},_react2.default.createElement('p',null,this.props.greetings.hello)))))));};return Home;}(_react2.default.Component))||_class);exports.default=Home;
+	'use strict';exports.__esModule=true;exports.default=undefined;var _classCallCheck2=__webpack_require__(176);var _classCallCheck3=_interopRequireDefault(_classCallCheck2);var _possibleConstructorReturn2=__webpack_require__(177);var _possibleConstructorReturn3=_interopRequireDefault(_possibleConstructorReturn2);var _inherits2=__webpack_require__(244);var _inherits3=_interopRequireDefault(_inherits2);var _class;var _react=__webpack_require__(10);var _react2=_interopRequireDefault(_react);var _reactRouter=__webpack_require__(253);var _rubix=__webpack_require__(254);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var Proyecto=(0,_reactRouter.withRouter)(_class=function(_React$Component){(0,_inherits3.default)(Proyecto,_React$Component);function Proyecto(){(0,_classCallCheck3.default)(this,Proyecto);return(0,_possibleConstructorReturn3.default)(this,_React$Component.apply(this,arguments));}Proyecto.prototype.render=function render(){return _react2.default.createElement(_rubix.PanelContainer,null,_react2.default.createElement(_rubix.Panel,null,_react2.default.createElement(_rubix.PanelBody,null,_react2.default.createElement(_rubix.Grid,null,_react2.default.createElement(_rubix.Row,null,_react2.default.createElement(_rubix.Col,{xs:12},_react2.default.createElement(_rubix.PageHeader,null,'Proyecto Collahuasi'))),_react2.default.createElement(_rubix.Row,null,_react2.default.createElement(_rubix.Col,{xs:12},_react2.default.createElement(_rubix.Table,{striped:true,bordered:true},_react2.default.createElement('tbody',null,_react2.default.createElement('tr',null,_react2.default.createElement('td',null,'Nombre'),_react2.default.createElement('td',null,_react2.default.createElement('a',{href:'#',className:'xeditable','data-type':'text','data-title':'Nombre Proyecto'},'Collahuasi'))),_react2.default.createElement('tr',null,_react2.default.createElement('td',null,'Mandante'),_react2.default.createElement('td',null,_react2.default.createElement('a',{href:'#',className:'xeditable','data-type':'text','data-title':'Nombre Proyecto'},'CONSORCIO ANGLO AMERICAN'))),_react2.default.createElement('tr',null,_react2.default.createElement('td',null,'Cliente'),_react2.default.createElement('td',null,_react2.default.createElement('a',{href:'#',className:'xeditable','data-type':'text','data-title':'Nombre Proyecto'},'MINETRUS'))),_react2.default.createElement('tr',null,_react2.default.createElement('td',null,'RUT Mandante'),_react2.default.createElement('td',null,_react2.default.createElement('a',{href:'#',className:'xeditable','data-type':'text','data-title':'Nombre Proyecto'},'11.111.111-1'))),_react2.default.createElement('tr',null,_react2.default.createElement('td',null,'RUT Cliente'),_react2.default.createElement('td',null,_react2.default.createElement('a',{href:'#',className:'xeditable','data-type':'text','data-title':'Nombre Proyecto'},'22.222.222-2'))),_react2.default.createElement('tr',null,_react2.default.createElement('td',null,'Direcci\xF3n'),_react2.default.createElement('td',null,_react2.default.createElement('a',{href:'#',className:'xeditable','data-type':'text','data-title':'Nombre Proyecto'},'DIRECCI\xD3N 1'))),_react2.default.createElement('tr',null,_react2.default.createElement('td',null,'Ciudad'),_react2.default.createElement('td',null,_react2.default.createElement('a',{href:'#',className:'xeditable','data-type':'text','data-title':'Nombre Proyecto'},'CALAMA'))),_react2.default.createElement('tr',null,_react2.default.createElement('td',null,'Region'),_react2.default.createElement('td',null,_react2.default.createElement('a',{href:'#',className:'xeditable','data-type':'text','data-title':'Nombre Proyecto'},'ANTOFAGASTA'))),_react2.default.createElement('tr',null,_react2.default.createElement('td',null,'Direcci\xF3n Cliente'),_react2.default.createElement('td',null,_react2.default.createElement('a',{href:'#',className:'xeditable','data-type':'text','data-title':'Nombre Proyecto'},'DIRECCI\xD3N CLIENTE'))),_react2.default.createElement('tr',null,_react2.default.createElement('td',null,'Ciudad Cliente'),_react2.default.createElement('td',null,_react2.default.createElement('a',{href:'#',className:'xeditable','data-type':'text','data-title':'Nombre Proyecto'},'IQUIQUE'))),_react2.default.createElement('tr',null,_react2.default.createElement('td',null,'Region Cliente'),_react2.default.createElement('td',null,_react2.default.createElement('a',{href:'#',className:'xeditable','data-type':'text','data-title':'Nombre Proyecto'},'TARAPAC\xC1'))),_react2.default.createElement('tr',null,_react2.default.createElement('td',null,'Contacto Cliente'),_react2.default.createElement('td',null,_react2.default.createElement('a',{href:'#',className:'xeditable','data-type':'text','data-title':'Nombre Proyecto'},'NOMBRE CONTACTO'))),_react2.default.createElement('tr',null,_react2.default.createElement('td',null,'Tel\xE9fono Cliente'),_react2.default.createElement('td',null,_react2.default.createElement('a',{href:'#',className:'xeditable','data-type':'text','data-title':'Nombre Proyecto'},'+56 9 12345678'))),_react2.default.createElement('tr',null,_react2.default.createElement('td',null,'Correo Cliente'),_react2.default.createElement('td',null,_react2.default.createElement('a',{href:'#',className:'xeditable','data-type':'text','data-title':'Nombre Proyecto'},'cliente@gmail.com')))))))))));};return Proyecto;}(_react2.default.Component))||_class;exports.default=Proyecto;
 
 /***/ }),
 /* 619 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	'use strict';exports.__esModule=true;exports.default=undefined;var _classCallCheck2=__webpack_require__(176);var _classCallCheck3=_interopRequireDefault(_classCallCheck2);var _possibleConstructorReturn2=__webpack_require__(177);var _possibleConstructorReturn3=_interopRequireDefault(_possibleConstructorReturn2);var _inherits2=__webpack_require__(244);var _inherits3=_interopRequireDefault(_inherits2);var _react=__webpack_require__(10);var _react2=_interopRequireDefault(_react);var _rubix=__webpack_require__(254);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var Polines=function(_React$Component){(0,_inherits3.default)(Polines,_React$Component);function Polines(){(0,_classCallCheck3.default)(this,Polines);return(0,_possibleConstructorReturn3.default)(this,_React$Component.apply(this,arguments));}Polines.prototype.render=function render(){return _react2.default.createElement(_rubix.PanelContainer,null,_react2.default.createElement(_rubix.Panel,null,_react2.default.createElement(_rubix.PanelBody,null,_react2.default.createElement(_rubix.Grid,null,_react2.default.createElement(_rubix.Row,null,_react2.default.createElement(_rubix.Col,{xs:12},_react2.default.createElement(_rubix.PageHeader,null,'Polines'))),_react2.default.createElement(_rubix.Row,null,_react2.default.createElement(_rubix.Col,{xs:12},_react2.default.createElement(_rubix.Table,{responsive:true},_react2.default.createElement('thead',null,_react2.default.createElement('tr',null,_react2.default.createElement('th',null,'ID'),_react2.default.createElement('th',null,'Marca'),_react2.default.createElement('th',null,'Estaci\xF3n'),_react2.default.createElement('th',null,'Posicion'),_react2.default.createElement('th',null,'Garantia'),_react2.default.createElement('th',null,'Estado'),_react2.default.createElement('th',null,'Acciones'))),_react2.default.createElement('tbody',null,_react2.default.createElement('tr',null,_react2.default.createElement('td',null,'1'),_react2.default.createElement('td',null,'POLIN001'),_react2.default.createElement('td',null,'T1'),_react2.default.createElement('td',null,'P1'),_react2.default.createElement('td',null,'2 A\xD1OS'),_react2.default.createElement('td',null,'FUNCIONAMIENTO'),_react2.default.createElement('td',null,_react2.default.createElement('span',{className:'icon-fontello-pencil-1'}),' | ',_react2.default.createElement('span',{className:'icon-fontello-trash-8'}))),_react2.default.createElement('tr',null,_react2.default.createElement('td',null,'2'),_react2.default.createElement('td',null,'POLIN002'),_react2.default.createElement('td',null,'T2'),_react2.default.createElement('td',null,'P2'),_react2.default.createElement('td',null,'2 A\xD1OS'),_react2.default.createElement('td',null,'FUNCIONAMIENTO'),_react2.default.createElement('td',null,_react2.default.createElement('span',{className:'icon-fontello-pencil-1'}),' | ',_react2.default.createElement('span',{className:'icon-fontello-trash-8'}))),_react2.default.createElement('tr',null,_react2.default.createElement('td',null,'3'),_react2.default.createElement('td',null,'POLIN003'),_react2.default.createElement('td',null,'T2'),_react2.default.createElement('td',null,'P3'),_react2.default.createElement('td',null,'2 A\xD1OS'),_react2.default.createElement('td',null,'FUNCIONAMIENTO'),_react2.default.createElement('td',null,_react2.default.createElement('span',{className:'icon-fontello-pencil-1'}),' | ',_react2.default.createElement('span',{className:'icon-fontello-trash-8'}))),_react2.default.createElement('tr',null,_react2.default.createElement('td',null,'4'),_react2.default.createElement('td',null,'POLIN004'),_react2.default.createElement('td',null,'T2'),_react2.default.createElement('td',null,'P4'),_react2.default.createElement('td',null,'2 A\xD1OS'),_react2.default.createElement('td',null,'FUNCIONAMIENTO'),_react2.default.createElement('td',null,_react2.default.createElement('span',{className:'icon-fontello-pencil-1'}),' | ',_react2.default.createElement('span',{className:'icon-fontello-trash-8'}))),_react2.default.createElement('tr',null,_react2.default.createElement('td',null,'5'),_react2.default.createElement('td',null,'POLIN005'),_react2.default.createElement('td',null,'T2'),_react2.default.createElement('td',null,'P5'),_react2.default.createElement('td',null,'2 A\xD1OS'),_react2.default.createElement('td',null,'FUNCIONAMIENTO'),_react2.default.createElement('td',null,_react2.default.createElement('span',{className:'icon-fontello-pencil-1'}),' | ',_react2.default.createElement('span',{className:'icon-fontello-trash-8'}))),_react2.default.createElement('tr',null,_react2.default.createElement('td',null,'6'),_react2.default.createElement('td',null,'POLIN006'),_react2.default.createElement('td',null,'T2'),_react2.default.createElement('td',null,'P6'),_react2.default.createElement('td',null,'2 A\xD1OS'),_react2.default.createElement('td',null,'FUNCIONAMIENTO'),_react2.default.createElement('td',null,_react2.default.createElement('span',{className:'icon-fontello-pencil-1'}),' | ',_react2.default.createElement('span',{className:'icon-fontello-trash-8'}))),_react2.default.createElement('tr',null,_react2.default.createElement('td',null,'7'),_react2.default.createElement('td',null,'POLIN007'),_react2.default.createElement('td',null,'T4'),_react2.default.createElement('td',null,'P7'),_react2.default.createElement('td',null,'2 A\xD1OS'),_react2.default.createElement('td',null,'FUNCIONAMIENTO'),_react2.default.createElement('td',null,_react2.default.createElement('span',{className:'icon-fontello-pencil-1'}),' | ',_react2.default.createElement('span',{className:'icon-fontello-trash-8'}))),_react2.default.createElement('tr',null,_react2.default.createElement('td',null,'8'),_react2.default.createElement('td',null,'POLIN008'),_react2.default.createElement('td',null,'T3'),_react2.default.createElement('td',null,'P8'),_react2.default.createElement('td',null,'2 A\xD1OS'),_react2.default.createElement('td',null,'FUNCIONAMIENTO'),_react2.default.createElement('td',null,_react2.default.createElement('span',{className:'icon-fontello-pencil-1'}),' | ',_react2.default.createElement('span',{className:'icon-fontello-trash-8'}))),_react2.default.createElement('tr',null,_react2.default.createElement('td',null,'9'),_react2.default.createElement('td',null,'POLIN009'),_react2.default.createElement('td',null,'T3'),_react2.default.createElement('td',null,'P9'),_react2.default.createElement('td',null,'2 A\xD1OS'),_react2.default.createElement('td',null,'FUNCIONAMIENTO'),_react2.default.createElement('td',null,_react2.default.createElement('span',{className:'icon-fontello-pencil-1'}),' | ',_react2.default.createElement('span',{className:'icon-fontello-trash-8'}))),_react2.default.createElement('tr',null,_react2.default.createElement('td',null,'10'),_react2.default.createElement('td',null,'POLIN010'),_react2.default.createElement('td',null,'T3'),_react2.default.createElement('td',null,'P10'),_react2.default.createElement('td',null,'2 A\xD1OS'),_react2.default.createElement('td',null,'FUNCIONAMIENTO'),_react2.default.createElement('td',null,_react2.default.createElement('span',{className:'icon-fontello-pencil-1'}),' | ',_react2.default.createElement('span',{className:'icon-fontello-trash-8'}))),_react2.default.createElement('tr',null,_react2.default.createElement('td',null,'11'),_react2.default.createElement('td',null,'POLIN011'),_react2.default.createElement('td',null,'T3'),_react2.default.createElement('td',null,'P11'),_react2.default.createElement('td',null,'2 A\xD1OS'),_react2.default.createElement('td',null,'FUNCIONAMIENTO'),_react2.default.createElement('td',null,_react2.default.createElement('span',{className:'icon-fontello-pencil-1'}),' | ',_react2.default.createElement('span',{className:'icon-fontello-trash-8'}))),_react2.default.createElement('tr',null,_react2.default.createElement('td',null,'12'),_react2.default.createElement('td',null,'POLIN012'),_react2.default.createElement('td',null,'T3'),_react2.default.createElement('td',null,'P12'),_react2.default.createElement('td',null,'2 A\xD1OS'),_react2.default.createElement('td',null,'FUNCIONAMIENTO'),_react2.default.createElement('td',null,_react2.default.createElement('span',{className:'icon-fontello-pencil-1'}),' | ',_react2.default.createElement('span',{className:'icon-fontello-trash-8'})))))))))));};return Polines;}(_react2.default.Component);exports.default=Polines;
+	'use strict';exports.__esModule=true;exports.default=undefined;var _classCallCheck2=__webpack_require__(176);var _classCallCheck3=_interopRequireDefault(_classCallCheck2);var _possibleConstructorReturn2=__webpack_require__(177);var _possibleConstructorReturn3=_interopRequireDefault(_possibleConstructorReturn2);var _inherits2=__webpack_require__(244);var _inherits3=_interopRequireDefault(_inherits2);var _class;var _react=__webpack_require__(10);var _react2=_interopRequireDefault(_react);var _reactRouter=__webpack_require__(253);var _rubix=__webpack_require__(254);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var Proyectos=(0,_reactRouter.withRouter)(_class=function(_React$Component){(0,_inherits3.default)(Proyectos,_React$Component);function Proyectos(){(0,_classCallCheck3.default)(this,Proyectos);return(0,_possibleConstructorReturn3.default)(this,_React$Component.apply(this,arguments));}Proyectos.prototype.render=function render(){return _react2.default.createElement(_rubix.PanelContainer,null,_react2.default.createElement(_rubix.Panel,null,_react2.default.createElement(_rubix.PanelBody,null,_react2.default.createElement(_rubix.Grid,null,_react2.default.createElement(_rubix.Row,null,_react2.default.createElement(_rubix.Col,{xs:12},_react2.default.createElement(_rubix.PageHeader,null,'Proyectos'))),_react2.default.createElement(_rubix.Row,null,_react2.default.createElement(_rubix.Col,{xs:12},_react2.default.createElement(_rubix.Table,{responsive:true},_react2.default.createElement('thead',null,_react2.default.createElement('tr',null,_react2.default.createElement('th',null,'ID'),_react2.default.createElement('th',null,'Nombre'),_react2.default.createElement('th',null,'Mandante'),_react2.default.createElement('th',null,'Cliente'),_react2.default.createElement('th',null,'RUT Mandante'),_react2.default.createElement('th',null,'RUT Cliente'),_react2.default.createElement('th',null,'Direcci\xF3n'),_react2.default.createElement('th',null,'Ciudad'),_react2.default.createElement('th',null,'Acciones'))),_react2.default.createElement('tbody',null,_react2.default.createElement('tr',null,_react2.default.createElement('td',null,'1'),_react2.default.createElement('td',null,'Collahuasi'),_react2.default.createElement('td',null,'CONSORCIO ANGLO AMERICAN'),_react2.default.createElement('td',null,'MINETRUST'),_react2.default.createElement('td',null,'11.111.111-1'),_react2.default.createElement('td',null,'22.222.222-2'),_react2.default.createElement('td',null,'DIRECCION 1'),_react2.default.createElement('td',null,'SANTIAGO'),_react2.default.createElement('td',null,_react2.default.createElement('span',{className:'icon-fontello-pencil-1'}),' | ',_react2.default.createElement('span',{className:'icon-fontello-trash-8'}),' | ',_react2.default.createElement(_reactRouter.Link,{to:'/proyecto'},_react2.default.createElement('span',{className:'icon-fontello-eye-1'})))),_react2.default.createElement('tr',null,_react2.default.createElement('td',null,'2'),_react2.default.createElement('td',null,'GABY-AREA 100-300'),_react2.default.createElement('td',null,'CODELCO'),_react2.default.createElement('td',null,'REVESOL'),_react2.default.createElement('td',null,'33.333.333-3'),_react2.default.createElement('td',null,'44.444.444-4'),_react2.default.createElement('td',null,'DIRECCI\xD3N 2'),_react2.default.createElement('td',null,'CALAMA'),_react2.default.createElement('td',null,_react2.default.createElement('span',{className:'icon-fontello-pencil-1'}),' | ',_react2.default.createElement('span',{className:'icon-fontello-trash-8'}),' | ',_react2.default.createElement('span',{className:'icon-fontello-eye-1'})))))))))));};return Proyectos;}(_react2.default.Component))||_class;exports.default=Proyectos;
 
 /***/ }),
 /* 620 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	'use strict';exports.__esModule=true;exports.default=undefined;var _classCallCheck2=__webpack_require__(176);var _classCallCheck3=_interopRequireDefault(_classCallCheck2);var _possibleConstructorReturn2=__webpack_require__(177);var _possibleConstructorReturn3=_interopRequireDefault(_possibleConstructorReturn2);var _inherits2=__webpack_require__(244);var _inherits3=_interopRequireDefault(_inherits2);var _react=__webpack_require__(10);var _react2=_interopRequireDefault(_react);var _rubix=__webpack_require__(254);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var Correas=function(_React$Component){(0,_inherits3.default)(Correas,_React$Component);function Correas(){(0,_classCallCheck3.default)(this,Correas);return(0,_possibleConstructorReturn3.default)(this,_React$Component.apply(this,arguments));}Correas.prototype.render=function render(){return _react2.default.createElement(_rubix.PanelContainer,null,_react2.default.createElement(_rubix.Panel,null,_react2.default.createElement(_rubix.PanelBody,null,_react2.default.createElement(_rubix.Grid,null,_react2.default.createElement(_rubix.Row,null,_react2.default.createElement(_rubix.Col,{xs:12},_react2.default.createElement(_rubix.PageHeader,null,'Correas'))),_react2.default.createElement(_rubix.Row,null,_react2.default.createElement(_rubix.Col,{xs:12},_react2.default.createElement(_rubix.Table,{responsive:true},_react2.default.createElement('thead',null,_react2.default.createElement('tr',null,_react2.default.createElement('th',null,'ID'),_react2.default.createElement('th',null,'Nombre'),_react2.default.createElement('th',null,'Ancho'),_react2.default.createElement('th',null,'Acciones'))),_react2.default.createElement('tbody',null,_react2.default.createElement('tr',null,_react2.default.createElement('td',null,'1'),_react2.default.createElement('td',null,'AL001'),_react2.default.createElement('td',null,'1000cm'),_react2.default.createElement('td',null,_react2.default.createElement('span',{className:'icon-fontello-pencil-1'}),' | ',_react2.default.createElement('span',{className:'icon-fontello-trash-8'})))))))))));};return Correas;}(_react2.default.Component);exports.default=Correas;
+	'use strict';exports.__esModule=true;exports.default=undefined;var _classCallCheck2=__webpack_require__(176);var _classCallCheck3=_interopRequireDefault(_classCallCheck2);var _possibleConstructorReturn2=__webpack_require__(177);var _possibleConstructorReturn3=_interopRequireDefault(_possibleConstructorReturn2);var _inherits2=__webpack_require__(244);var _inherits3=_interopRequireDefault(_inherits2);var _react=__webpack_require__(10);var _react2=_interopRequireDefault(_react);var _rubix=__webpack_require__(254);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var Polines=function(_React$Component){(0,_inherits3.default)(Polines,_React$Component);function Polines(){(0,_classCallCheck3.default)(this,Polines);return(0,_possibleConstructorReturn3.default)(this,_React$Component.apply(this,arguments));}Polines.prototype.render=function render(){return _react2.default.createElement(_rubix.PanelContainer,null,_react2.default.createElement(_rubix.Panel,null,_react2.default.createElement(_rubix.PanelBody,null,_react2.default.createElement(_rubix.Grid,null,_react2.default.createElement(_rubix.Row,null,_react2.default.createElement(_rubix.Col,{xs:12},_react2.default.createElement(_rubix.PageHeader,null,'Polines'))),_react2.default.createElement(_rubix.Row,null,_react2.default.createElement(_rubix.Col,{xs:12},_react2.default.createElement(_rubix.Table,{responsive:true},_react2.default.createElement('thead',null,_react2.default.createElement('tr',null,_react2.default.createElement('th',null,'ID'),_react2.default.createElement('th',null,'Descripci\xF3n'),_react2.default.createElement('th',null,'Tipo'),_react2.default.createElement('th',null,'Ancho'),_react2.default.createElement('th',null,'Diametro'),_react2.default.createElement('th',null,'Eje'),_react2.default.createElement('th',null,'Conector'))),_react2.default.createElement('tbody',null,_react2.default.createElement('tr',null,_react2.default.createElement('td',null,'1'),_react2.default.createElement('td',null,'POLIN DE CARGA, MANTO METALICO, 600mm X 6", EJE 40mm CON CORTE A 32mm ENTRE CARAS'),_react2.default.createElement('td',null,'CARGA'),_react2.default.createElement('td',null,'600'),_react2.default.createElement('td',null,'152'),_react2.default.createElement('td',null,'40'),_react2.default.createElement('td',null,'RANURA 32mm'),_react2.default.createElement('td',null,_react2.default.createElement('span',{className:'icon-fontello-pencil-1'}),' | ',_react2.default.createElement('span',{className:'icon-fontello-trash-8'}))),_react2.default.createElement('tr',null,_react2.default.createElement('td',null,'2'),_react2.default.createElement('td',null,'POLIN DE CARGA, MANTO METALICO, 450mm X 6", EJE 40mm CON CORTE A 32mm ENTRE CARAS'),_react2.default.createElement('td',null,'CARGA'),_react2.default.createElement('td',null,'450'),_react2.default.createElement('td',null,'152'),_react2.default.createElement('td',null,'40'),_react2.default.createElement('td',null,'RANURA 32mm'),_react2.default.createElement('td',null,_react2.default.createElement('span',{className:'icon-fontello-pencil-1'}),' | ',_react2.default.createElement('span',{className:'icon-fontello-trash-8'}))),_react2.default.createElement('tr',null,_react2.default.createElement('td',null,'3'),_react2.default.createElement('td',null,'POLIN DE RETORNO, MANTO METALICO, 1000mm X 7", EJE 32mm CON CORTE A 28mm ENTRE CARAS'),_react2.default.createElement('td',null,'RETORNO'),_react2.default.createElement('td',null,'1000'),_react2.default.createElement('td',null,'178'),_react2.default.createElement('td',null,'32'),_react2.default.createElement('td',null,'RANURA 28mm'),_react2.default.createElement('td',null,_react2.default.createElement('span',{className:'icon-fontello-pencil-1'}),' | ',_react2.default.createElement('span',{className:'icon-fontello-trash-8'}))),_react2.default.createElement('tr',null,_react2.default.createElement('td',null,'4'),_react2.default.createElement('td',null,'POLEA MOTRIZ REVESTIDA GOMA "V" 25mm, PARA CORREA 1800mm, 1200mm DIAMETRO'),_react2.default.createElement('td',null,'POLEA'),_react2.default.createElement('td',null,'2000'),_react2.default.createElement('td',null,'1200'),_react2.default.createElement('td',null,'240'),_react2.default.createElement('td',null,'FALKEN'),_react2.default.createElement('td',null,_react2.default.createElement('span',{className:'icon-fontello-pencil-1'}),' | ',_react2.default.createElement('span',{className:'icon-fontello-trash-8'}))),_react2.default.createElement('tr',null,_react2.default.createElement('td',null,'5'),_react2.default.createElement('td',null,'POLEA CONDUCIDA REVESTIDA GOMA LISA 20mm, PARA CORREA 1800mm, 1200mm DIAMETRO'),_react2.default.createElement('td',null,'POLEA'),_react2.default.createElement('td',null,'2000'),_react2.default.createElement('td',null,'1200'),_react2.default.createElement('td',null,'180'),_react2.default.createElement('td',null),_react2.default.createElement('td',null,_react2.default.createElement('span',{className:'icon-fontello-pencil-1'}),' | ',_react2.default.createElement('span',{className:'icon-fontello-trash-8'})))))))))));};return Polines;}(_react2.default.Component);exports.default=Polines;
 
 /***/ }),
 /* 621 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	'use strict';exports.__esModule=true;exports.default=undefined;var _classCallCheck2=__webpack_require__(176);var _classCallCheck3=_interopRequireDefault(_classCallCheck2);var _possibleConstructorReturn2=__webpack_require__(177);var _possibleConstructorReturn3=_interopRequireDefault(_possibleConstructorReturn2);var _inherits2=__webpack_require__(244);var _inherits3=_interopRequireDefault(_inherits2);var _class;var _react=__webpack_require__(10);var _react2=_interopRequireDefault(_react);var _reactRouter=__webpack_require__(253);var _rubix=__webpack_require__(254);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var Estaciones=(0,_reactRouter.withRouter)(_class=function(_React$Component){(0,_inherits3.default)(Estaciones,_React$Component);function Estaciones(){(0,_classCallCheck3.default)(this,Estaciones);return(0,_possibleConstructorReturn3.default)(this,_React$Component.apply(this,arguments));}Estaciones.prototype.render=function render(){return _react2.default.createElement(_rubix.PanelContainer,null,_react2.default.createElement(_rubix.Panel,null,_react2.default.createElement(_rubix.PanelBody,null,_react2.default.createElement(_rubix.Grid,null,_react2.default.createElement(_rubix.Row,null,_react2.default.createElement(_rubix.Col,{xs:12},_react2.default.createElement(_rubix.PageHeader,null,'Estaciones'))),_react2.default.createElement(_rubix.Row,null,_react2.default.createElement(_rubix.Col,{xs:12},_react2.default.createElement(_rubix.Table,{responsive:true},_react2.default.createElement('thead',null,_react2.default.createElement('tr',null,_react2.default.createElement('th',null,'ID'),_react2.default.createElement('th',null,'Tipo'),_react2.default.createElement('th',null,'Modelo'),_react2.default.createElement('th',null,'# Posiciones'),_react2.default.createElement('th',null,'Proveedor'),_react2.default.createElement('th',null,'# Polines Compatibles'),_react2.default.createElement('th',null,'# Correas compatibles'),_react2.default.createElement('th',null,'Coordenadas'),_react2.default.createElement('th',null,'Acciones'))),_react2.default.createElement('tbody',null,_react2.default.createElement('tr',null,_react2.default.createElement('td',null,'1'),_react2.default.createElement('td',null,'T1'),_react2.default.createElement('td',null,'MODELO-T1'),_react2.default.createElement('td',null,'1'),_react2.default.createElement('td',null,'PROVEEDOR'),_react2.default.createElement('td',null,'1'),_react2.default.createElement('td',null,'1'),_react2.default.createElement('td',null,'AREA 1'),_react2.default.createElement('td',null,_react2.default.createElement('span',{className:'icon-fontello-pencil-1'}),' | ',_react2.default.createElement('span',{className:'icon-fontello-trash-8'}),' | ',_react2.default.createElement('span',{className:'icon-fontello-eye-1'}))),_react2.default.createElement('tr',null,_react2.default.createElement('td',null,'2'),_react2.default.createElement('td',null,'T2'),_react2.default.createElement('td',null,'MODELO-T2'),_react2.default.createElement('td',null,'6'),_react2.default.createElement('td',null,'PROVEEDOR'),_react2.default.createElement('td',null,'6'),_react2.default.createElement('td',null,'1'),_react2.default.createElement('td',null,'AREA 1'),_react2.default.createElement('td',null,_react2.default.createElement('span',{className:'icon-fontello-pencil-1'}),' | ',_react2.default.createElement('span',{className:'icon-fontello-trash-8'}),' | ',_react2.default.createElement('span',{className:'icon-fontello-eye-1'}))),_react2.default.createElement('tr',null,_react2.default.createElement('td',null,'3'),_react2.default.createElement('td',null,'T3'),_react2.default.createElement('td',null,'MODELO-T3'),_react2.default.createElement('td',null,'5'),_react2.default.createElement('td',null,'PROVEEDOR'),_react2.default.createElement('td',null,'5'),_react2.default.createElement('td',null,'1'),_react2.default.createElement('td',null,'AREA 1'),_react2.default.createElement('td',null,_react2.default.createElement('span',{className:'icon-fontello-pencil-1'}),' | ',_react2.default.createElement('span',{className:'icon-fontello-trash-8'}),' | ',_react2.default.createElement(_reactRouter.Link,{to:'/estaciones/3'},_react2.default.createElement('span',{className:'icon-fontello-eye-1'})))),_react2.default.createElement('tr',null,_react2.default.createElement('td',null,'4'),_react2.default.createElement('td',null,'T4'),_react2.default.createElement('td',null,'MODELO-T4'),_react2.default.createElement('td',null,'1'),_react2.default.createElement('td',null,'PROVEEDOR'),_react2.default.createElement('td',null,'1'),_react2.default.createElement('td',null,'1'),_react2.default.createElement('td',null,'AREA 1'),_react2.default.createElement('td',null,_react2.default.createElement('span',{className:'icon-fontello-pencil-1'}),' | ',_react2.default.createElement('span',{className:'icon-fontello-trash-8'}),' | ',_react2.default.createElement('span',{className:'icon-fontello-eye-1'})))))))))));};return Estaciones;}(_react2.default.Component))||_class;exports.default=Estaciones;
+	'use strict';exports.__esModule=true;exports.default=undefined;var _classCallCheck2=__webpack_require__(176);var _classCallCheck3=_interopRequireDefault(_classCallCheck2);var _possibleConstructorReturn2=__webpack_require__(177);var _possibleConstructorReturn3=_interopRequireDefault(_possibleConstructorReturn2);var _inherits2=__webpack_require__(244);var _inherits3=_interopRequireDefault(_inherits2);var _react=__webpack_require__(10);var _react2=_interopRequireDefault(_react);var _rubix=__webpack_require__(254);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var Correas=function(_React$Component){(0,_inherits3.default)(Correas,_React$Component);function Correas(){(0,_classCallCheck3.default)(this,Correas);return(0,_possibleConstructorReturn3.default)(this,_React$Component.apply(this,arguments));}Correas.prototype.render=function render(){return _react2.default.createElement(_rubix.PanelContainer,null,_react2.default.createElement(_rubix.Panel,null,_react2.default.createElement(_rubix.PanelBody,null,_react2.default.createElement(_rubix.Grid,null,_react2.default.createElement(_rubix.Row,null,_react2.default.createElement(_rubix.Col,{xs:12},_react2.default.createElement(_rubix.PageHeader,null,'Correas'))),_react2.default.createElement(_rubix.Row,null,_react2.default.createElement(_rubix.Col,{xs:12},_react2.default.createElement(_rubix.Table,{responsive:true},_react2.default.createElement('thead',null,_react2.default.createElement('tr',null,_react2.default.createElement('th',null,'ID'),_react2.default.createElement('th',null,'Descripci\xF3n'),_react2.default.createElement('th',null,'ID Proyecto'),_react2.default.createElement('th',null,'Nombre Correa'),_react2.default.createElement('th',null,'TAG'),_react2.default.createElement('th',null,'Total Posiciones'),_react2.default.createElement('th',null,'Total Poleas'),_react2.default.createElement('th',null,'Ancho Correa'),_react2.default.createElement('th',null,'Coordenadas Cabeza'),_react2.default.createElement('th',null,'Coordenadas Cola'),_react2.default.createElement('th',null,'Acciones'))),_react2.default.createElement('tbody',null,_react2.default.createElement('tr',null,_react2.default.createElement('td',null,'1'),_react2.default.createElement('td',null,'CORREA ALIMENTACION SAG 1'),_react2.default.createElement('td',null,'1'),_react2.default.createElement('td',null,'CV-101'),_react2.default.createElement('td',null,'CH-1200-20-CV-101'),_react2.default.createElement('td',null,'200'),_react2.default.createElement('td',null,'4'),_react2.default.createElement('td',null,'1800'),_react2.default.createElement('td',null),_react2.default.createElement('td',null),_react2.default.createElement('td',null,_react2.default.createElement('span',{className:'icon-fontello-pencil-1'}),' | ',_react2.default.createElement('span',{className:'icon-fontello-trash-8'}))),_react2.default.createElement('tr',null,_react2.default.createElement('td',null,'2'),_react2.default.createElement('td',null,'CORREA ALIMENTACION SAG 2'),_react2.default.createElement('td',null,'1'),_react2.default.createElement('td',null,'CV-102'),_react2.default.createElement('td',null,'CH-1200-20-CV-102'),_react2.default.createElement('td',null,'200'),_react2.default.createElement('td',null,'4'),_react2.default.createElement('td',null,'1800'),_react2.default.createElement('td',null),_react2.default.createElement('td',null),_react2.default.createElement('td',null,_react2.default.createElement('span',{className:'icon-fontello-pencil-1'}),' | ',_react2.default.createElement('span',{className:'icon-fontello-trash-8'}))),_react2.default.createElement('tr',null,_react2.default.createElement('td',null,'3'),_react2.default.createElement('td',null,'CORREA DESCARGA SAG 1'),_react2.default.createElement('td',null,'1'),_react2.default.createElement('td',null,'CV-201'),_react2.default.createElement('td',null,'CH-2200-20-CV-201'),_react2.default.createElement('td',null,'600'),_react2.default.createElement('td',null,'5'),_react2.default.createElement('td',null,'1600'),_react2.default.createElement('td',null),_react2.default.createElement('td',null),_react2.default.createElement('td',null,_react2.default.createElement('span',{className:'icon-fontello-pencil-1'}),' | ',_react2.default.createElement('span',{className:'icon-fontello-trash-8'}))),_react2.default.createElement('tr',null,_react2.default.createElement('td',null,'4'),_react2.default.createElement('td',null,'CORREA DESCARGA SAG 2'),_react2.default.createElement('td',null,'1'),_react2.default.createElement('td',null,'CV-202'),_react2.default.createElement('td',null,'CH-2200-20-CV-202'),_react2.default.createElement('td',null,'600'),_react2.default.createElement('td',null,'5'),_react2.default.createElement('td',null,'1600'),_react2.default.createElement('td',null),_react2.default.createElement('td',null),_react2.default.createElement('td',null,_react2.default.createElement('span',{className:'icon-fontello-pencil-1'}),' | ',_react2.default.createElement('span',{className:'icon-fontello-trash-8'}))),_react2.default.createElement('tr',null,_react2.default.createElement('td',null,'5'),_react2.default.createElement('td',null,'CORREA SOBRE TAMA\xD1O MOLINO BOLAS 1'),_react2.default.createElement('td',null,'1'),_react2.default.createElement('td',null,'CV-405'),_react2.default.createElement('td',null,'CH-4000-20-CV-405'),_react2.default.createElement('td',null,'100'),_react2.default.createElement('td',null,'3'),_react2.default.createElement('td',null,'1200'),_react2.default.createElement('td',null),_react2.default.createElement('td',null),_react2.default.createElement('td',null,_react2.default.createElement('span',{className:'icon-fontello-pencil-1'}),' | ',_react2.default.createElement('span',{className:'icon-fontello-trash-8'}))),_react2.default.createElement('tr',null,_react2.default.createElement('td',null,'6'),_react2.default.createElement('td',null,'CORREA OVERLAND 5KM'),_react2.default.createElement('td',null,'2'),_react2.default.createElement('td',null,'CV-107'),_react2.default.createElement('td',null),_react2.default.createElement('td',null,'2500'),_react2.default.createElement('td',null,'6'),_react2.default.createElement('td',null,'1600'),_react2.default.createElement('td',null),_react2.default.createElement('td',null),_react2.default.createElement('td',null,_react2.default.createElement('span',{className:'icon-fontello-pencil-1'}),' | ',_react2.default.createElement('span',{className:'icon-fontello-trash-8'}))),_react2.default.createElement('tr',null,_react2.default.createElement('td',null,'7'),_react2.default.createElement('td',null,'CORREA OVERLAND 3.5KM'),_react2.default.createElement('td',null,'2'),_react2.default.createElement('td',null,'CV-108'),_react2.default.createElement('td',null),_react2.default.createElement('td',null,'2000'),_react2.default.createElement('td',null,'6'),_react2.default.createElement('td',null,'1600'),_react2.default.createElement('td',null),_react2.default.createElement('td',null),_react2.default.createElement('td',null,_react2.default.createElement('span',{className:'icon-fontello-pencil-1'}),' | ',_react2.default.createElement('span',{className:'icon-fontello-trash-8'})))))))))));};return Correas;}(_react2.default.Component);exports.default=Correas;
 
 /***/ }),
 /* 622 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	'use strict';exports.__esModule=true;exports.default=undefined;var _classCallCheck2=__webpack_require__(176);var _classCallCheck3=_interopRequireDefault(_classCallCheck2);var _possibleConstructorReturn2=__webpack_require__(177);var _possibleConstructorReturn3=_interopRequireDefault(_possibleConstructorReturn2);var _inherits2=__webpack_require__(244);var _inherits3=_interopRequireDefault(_inherits2);var _react=__webpack_require__(10);var _react2=_interopRequireDefault(_react);var _rubix=__webpack_require__(254);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var Estacion=function(_React$Component){(0,_inherits3.default)(Estacion,_React$Component);function Estacion(){(0,_classCallCheck3.default)(this,Estacion);return(0,_possibleConstructorReturn3.default)(this,_React$Component.apply(this,arguments));}Estacion.prototype.render=function render(){return _react2.default.createElement(_rubix.PanelContainer,null,_react2.default.createElement(_rubix.Panel,null,_react2.default.createElement(_rubix.PanelBody,null,_react2.default.createElement(_rubix.Grid,null,_react2.default.createElement(_rubix.Row,null,_react2.default.createElement(_rubix.Col,{xs:12},_react2.default.createElement(_rubix.PageHeader,null,'Estaci\xF3n T3'))),_react2.default.createElement(_rubix.Row,null,_react2.default.createElement(_rubix.Col,{xs:12},_react2.default.createElement(_rubix.Table,{responsive:true},_react2.default.createElement('thead',null,_react2.default.createElement('tr',null,_react2.default.createElement('th',null,'Posici\xF3n'),_react2.default.createElement('th',null,'Tipo'),_react2.default.createElement('th',null,'Polines Compatibles'),_react2.default.createElement('th',null,'Correas compatibles'),_react2.default.createElement('th',null,'Acciones'))),_react2.default.createElement('tbody',null,_react2.default.createElement('tr',null,_react2.default.createElement('td',{rowSpan:'3'},'8'),_react2.default.createElement('td',{rowSpan:'3'},'ALIMENTADOR'),_react2.default.createElement('td',null,'POLIN TIPO 1'),_react2.default.createElement('td',null,'CORREA TIPO 1'),_react2.default.createElement('td',{rowSpan:'3'},_react2.default.createElement('span',{className:'icon-fontello-pencil-1'}),' | ',_react2.default.createElement('span',{className:'icon-fontello-trash-8'}))),_react2.default.createElement('tr',null,_react2.default.createElement('td',null,'POLIN TIPO 2'),_react2.default.createElement('td',null,'CORREA TIPO 2')),_react2.default.createElement('tr',null,_react2.default.createElement('td',null,'POLIN TIPO 3'),_react2.default.createElement('td',null,'CORREA TIPO 3')),_react2.default.createElement('tr',null,_react2.default.createElement('td',{rowSpan:'3'},'9'),_react2.default.createElement('td',{rowSpan:'3'},'ALIMENTADOR'),_react2.default.createElement('td',null,'POLIN TIPO 1'),_react2.default.createElement('td',null,'CORREA TIPO 1'),_react2.default.createElement('td',{rowSpan:'3'},_react2.default.createElement('span',{className:'icon-fontello-pencil-1'}),' | ',_react2.default.createElement('span',{className:'icon-fontello-trash-8'}))),_react2.default.createElement('tr',null,_react2.default.createElement('td',null,'POLIN TIPO 2'),_react2.default.createElement('td',null,'CORREA TIPO 2')),_react2.default.createElement('tr',null,_react2.default.createElement('td',null,'POLIN TIPO 3'),_react2.default.createElement('td',null,'CORREA TIPO 3')),_react2.default.createElement('tr',null,_react2.default.createElement('td',{rowSpan:'3'},'10'),_react2.default.createElement('td',{rowSpan:'3'},'ALIMENTADOR'),_react2.default.createElement('td',null,'POLIN TIPO 1'),_react2.default.createElement('td',null,'CORREA TIPO 1'),_react2.default.createElement('td',{rowSpan:'3'},_react2.default.createElement('span',{className:'icon-fontello-pencil-1'}),' | ',_react2.default.createElement('span',{className:'icon-fontello-trash-8'}))),_react2.default.createElement('tr',null,_react2.default.createElement('td',null,'POLIN TIPO 2'),_react2.default.createElement('td',null,'CORREA TIPO 2')),_react2.default.createElement('tr',null,_react2.default.createElement('td',null,'POLIN TIPO 3'),_react2.default.createElement('td',null,'CORREA TIPO 3')),_react2.default.createElement('tr',null,_react2.default.createElement('td',{rowSpan:'3'},'11'),_react2.default.createElement('td',{rowSpan:'3'},'ALIMENTADOR'),_react2.default.createElement('td',null,'POLIN TIPO 1'),_react2.default.createElement('td',null,'CORREA TIPO 1'),_react2.default.createElement('td',{rowSpan:'3'},_react2.default.createElement('span',{className:'icon-fontello-pencil-1'}),' | ',_react2.default.createElement('span',{className:'icon-fontello-trash-8'}))),_react2.default.createElement('tr',null,_react2.default.createElement('td',null,'POLIN TIPO 2'),_react2.default.createElement('td',null,'CORREA TIPO 2')),_react2.default.createElement('tr',null,_react2.default.createElement('td',null,'POLIN TIPO 3'),_react2.default.createElement('td',null,'CORREA TIPO 3')),_react2.default.createElement('tr',null,_react2.default.createElement('td',{rowSpan:'2'},'12'),_react2.default.createElement('td',{rowSpan:'2'},'ALIMENTADOR'),_react2.default.createElement('td',null,'POLIN TIPO 1'),_react2.default.createElement('td',null,'CORREA TIPO 1'),_react2.default.createElement('td',{rowSpan:'3'},_react2.default.createElement('span',{className:'icon-fontello-pencil-1'}),' | ',_react2.default.createElement('span',{className:'icon-fontello-trash-8'}))),_react2.default.createElement('tr',null,_react2.default.createElement('td',null,'POLIN TIPO 2'),_react2.default.createElement('td',null,'CORREA TIPO 2'))))))))));};return Estacion;}(_react2.default.Component);exports.default=Estacion;
+	'use strict';exports.__esModule=true;exports.default=undefined;var _classCallCheck2=__webpack_require__(176);var _classCallCheck3=_interopRequireDefault(_classCallCheck2);var _possibleConstructorReturn2=__webpack_require__(177);var _possibleConstructorReturn3=_interopRequireDefault(_possibleConstructorReturn2);var _inherits2=__webpack_require__(244);var _inherits3=_interopRequireDefault(_inherits2);var _class;var _react=__webpack_require__(10);var _react2=_interopRequireDefault(_react);var _reactRouter=__webpack_require__(253);var _rubix=__webpack_require__(254);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var Estaciones=(0,_reactRouter.withRouter)(_class=function(_React$Component){(0,_inherits3.default)(Estaciones,_React$Component);function Estaciones(){(0,_classCallCheck3.default)(this,Estaciones);return(0,_possibleConstructorReturn3.default)(this,_React$Component.apply(this,arguments));}Estaciones.prototype.render=function render(){return _react2.default.createElement(_rubix.PanelContainer,null,_react2.default.createElement(_rubix.Panel,null,_react2.default.createElement(_rubix.PanelBody,null,_react2.default.createElement(_rubix.Grid,null,_react2.default.createElement(_rubix.Row,null,_react2.default.createElement(_rubix.Col,{xs:12},_react2.default.createElement(_rubix.PageHeader,null,'Estaciones'))),_react2.default.createElement(_rubix.Row,null,_react2.default.createElement(_rubix.Col,{xs:12},_react2.default.createElement(_rubix.Table,{responsive:true},_react2.default.createElement('thead',null,_react2.default.createElement('tr',null,_react2.default.createElement('th',null,'ID'),_react2.default.createElement('th',null,'Descripci\xF3n'),_react2.default.createElement('th',null,'Tipo'),_react2.default.createElement('th',null,'Ancho'),_react2.default.createElement('th',null,'Posiciones'),_react2.default.createElement('th',null,'Acciones'))),_react2.default.createElement('tbody',null,_react2.default.createElement('tr',null,_react2.default.createElement('td',null,'1'),_react2.default.createElement('td',null,'ESTACION CARGA FIJA OVERLAND 35\xB0, 1800mm, 3 POLINES IGUALES 600mm, TIPO FMC 1095050'),_react2.default.createElement('td',null,'CARGA'),_react2.default.createElement('td',null,'1800'),_react2.default.createElement('td',null,'3'),_react2.default.createElement('td',null,_react2.default.createElement('span',{className:'icon-fontello-pencil-1'}),' | ',_react2.default.createElement('span',{className:'icon-fontello-trash-8'}),' | ',_react2.default.createElement(_reactRouter.Link,{to:'/estacion'},_react2.default.createElement('span',{className:'icon-fontello-eye-1'})))),_react2.default.createElement('tr',null,_react2.default.createElement('td',null,'2'),_react2.default.createElement('td',null,'ESTACION CARGA ANGULO AJUSTABLE OVERLAND, 1800mm, 3 POLINES IGUALES 600mm, TIPO FMC 1095051'),_react2.default.createElement('td',null,'CARGA'),_react2.default.createElement('td',null,'1800'),_react2.default.createElement('td',null,'3'),_react2.default.createElement('td',null,_react2.default.createElement('span',{className:'icon-fontello-pencil-1'}),' | ',_react2.default.createElement('span',{className:'icon-fontello-trash-8'}),' | ',_react2.default.createElement('span',{className:'icon-fontello-eye-1'}))),_react2.default.createElement('tr',null,_react2.default.createElement('td',null,'3'),_react2.default.createElement('td',null,'ESTACION CARGA AUTOALINEANTE OVERLAND, 1800mm, 3 POLINES IGUALES 600mm, TIPO FMC 1095052'),_react2.default.createElement('td',null,'CARGA'),_react2.default.createElement('td',null,'1800'),_react2.default.createElement('td',null,'3'),_react2.default.createElement('td',null,_react2.default.createElement('span',{className:'icon-fontello-pencil-1'}),' | ',_react2.default.createElement('span',{className:'icon-fontello-trash-8'}),' | ',_react2.default.createElement('span',{className:'icon-fontello-eye-1'}))),_react2.default.createElement('tr',null,_react2.default.createElement('td',null,'4'),_react2.default.createElement('td',null,'ESTACION RETORNO FIJA 15\xB0, 1800mm, 2 POLINES IGUALES 1000mm, TIPO FMC 1095060'),_react2.default.createElement('td',null,'RETORNO'),_react2.default.createElement('td',null,'1800'),_react2.default.createElement('td',null,'2'),_react2.default.createElement('td',null,_react2.default.createElement('span',{className:'icon-fontello-pencil-1'}),' | ',_react2.default.createElement('span',{className:'icon-fontello-trash-8'}),' | ',_react2.default.createElement('span',{className:'icon-fontello-eye-1'}))),_react2.default.createElement('tr',null,_react2.default.createElement('td',null,'5'),_react2.default.createElement('td',null,'BASE POLEA APERTURA 2000mm'),_react2.default.createElement('td',null,'POLEA'),_react2.default.createElement('td',null,'2000'),_react2.default.createElement('td',null,'1'),_react2.default.createElement('td',null,_react2.default.createElement('span',{className:'icon-fontello-pencil-1'}),' | ',_react2.default.createElement('span',{className:'icon-fontello-trash-8'}),' | ',_react2.default.createElement('span',{className:'icon-fontello-eye-1'})))))))))));};return Estaciones;}(_react2.default.Component))||_class;exports.default=Estaciones;
 
 /***/ }),
 /* 623 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';exports.__esModule=true;exports.default=undefined;var _classCallCheck2=__webpack_require__(176);var _classCallCheck3=_interopRequireDefault(_classCallCheck2);var _possibleConstructorReturn2=__webpack_require__(177);var _possibleConstructorReturn3=_interopRequireDefault(_possibleConstructorReturn2);var _inherits2=__webpack_require__(244);var _inherits3=_interopRequireDefault(_inherits2);var _react=__webpack_require__(10);var _react2=_interopRequireDefault(_react);var _rubix=__webpack_require__(254);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var Estacion=function(_React$Component){(0,_inherits3.default)(Estacion,_React$Component);function Estacion(){(0,_classCallCheck3.default)(this,Estacion);return(0,_possibleConstructorReturn3.default)(this,_React$Component.apply(this,arguments));}Estacion.prototype.render=function render(){return _react2.default.createElement(_rubix.PanelContainer,null,_react2.default.createElement(_rubix.Panel,null,_react2.default.createElement(_rubix.PanelBody,null,_react2.default.createElement(_rubix.Grid,null,_react2.default.createElement(_rubix.Row,null,_react2.default.createElement(_rubix.Col,{xs:12},_react2.default.createElement(_rubix.PageHeader,null,'Estaci\xF3n 1'))),_react2.default.createElement(_rubix.Row,null,_react2.default.createElement(_rubix.Col,{xs:12},_react2.default.createElement(_rubix.Table,{responsive:true},_react2.default.createElement('thead',null,_react2.default.createElement('tr',null,_react2.default.createElement('th',null,'ID'),_react2.default.createElement('th',null,'ID Estaci\xF3n'),_react2.default.createElement('th',null,'Posicion'),_react2.default.createElement('th',null,'Descripci\xF3n'),_react2.default.createElement('th',null,'Tipo'),_react2.default.createElement('th',null,'Acciones'))),_react2.default.createElement('tbody',null,_react2.default.createElement('tr',null,_react2.default.createElement('td',null,'1'),_react2.default.createElement('td',null,'1'),_react2.default.createElement('td',null,'1'),_react2.default.createElement('td',null,'IZQUIERDO'),_react2.default.createElement('td',null,'1'),_react2.default.createElement('td',null,_react2.default.createElement('span',{className:'icon-fontello-pencil-1'}),' | ',_react2.default.createElement('span',{className:'icon-fontello-trash-8'}))),_react2.default.createElement('tr',null,_react2.default.createElement('td',null,'2'),_react2.default.createElement('td',null,'1'),_react2.default.createElement('td',null,'2'),_react2.default.createElement('td',null,'CENTRO'),_react2.default.createElement('td',null,'1'),_react2.default.createElement('td',null,_react2.default.createElement('span',{className:'icon-fontello-pencil-1'}),' | ',_react2.default.createElement('span',{className:'icon-fontello-trash-8'}))),_react2.default.createElement('tr',null,_react2.default.createElement('td',null,'3'),_react2.default.createElement('td',null,'1'),_react2.default.createElement('td',null,'3'),_react2.default.createElement('td',null,'DERECHO'),_react2.default.createElement('td',null,'1'),_react2.default.createElement('td',null,_react2.default.createElement('span',{className:'icon-fontello-pencil-1'}),' | ',_react2.default.createElement('span',{className:'icon-fontello-trash-8'})))))))))));};return Estacion;}(_react2.default.Component);exports.default=Estacion;
+
+/***/ }),
+/* 624 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -49659,35 +49665,35 @@ require('source-map-support').install({environment: 'node'});
 	
 	var _reactRouter = __webpack_require__(253);
 	
-	var _reactHotLoader = __webpack_require__(624);
+	var _reactHotLoader = __webpack_require__(625);
 	
-	var _reactRouterScroll = __webpack_require__(625);
+	var _reactRouterScroll = __webpack_require__(626);
 	
 	var _reactRouterScroll2 = _interopRequireDefault(_reactRouterScroll);
 	
 	var _reactRedux = __webpack_require__(611);
 	
-	var _redux = __webpack_require__(636);
+	var _redux = __webpack_require__(637);
 	
-	var _reactRouterRedux = __webpack_require__(637);
+	var _reactRouterRedux = __webpack_require__(638);
 	
-	var _reduxThunk = __webpack_require__(638);
+	var _reduxThunk = __webpack_require__(639);
 	
 	var _reduxThunk2 = _interopRequireDefault(_reduxThunk);
 	
-	var _reduxFetchData = __webpack_require__(639);
+	var _reduxFetchData = __webpack_require__(640);
 	
-	var _utils = __webpack_require__(640);
+	var _utils = __webpack_require__(641);
 	
-	var _onRouterSetup = __webpack_require__(644);
+	var _onRouterSetup = __webpack_require__(645);
 	
 	var _onRouterSetup2 = _interopRequireDefault(_onRouterSetup);
 	
-	var _onRouterUpdate = __webpack_require__(646);
+	var _onRouterUpdate = __webpack_require__(647);
 	
 	var _onRouterUpdate2 = _interopRequireDefault(_onRouterUpdate);
 	
-	var _checkScroll = __webpack_require__(647);
+	var _checkScroll = __webpack_require__(648);
 	
 	var _checkScroll2 = _interopRequireDefault(_checkScroll);
 	
@@ -49878,13 +49884,13 @@ require('source-map-support').install({environment: 'node'});
 	}
 
 /***/ }),
-/* 624 */
+/* 625 */
 /***/ (function(module, exports) {
 
 	module.exports = require("react-hot-loader");
 
 /***/ }),
-/* 625 */
+/* 626 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -49896,7 +49902,7 @@ require('source-map-support').install({environment: 'node'});
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _ScrollBehaviorContainer = __webpack_require__(626);
+	var _ScrollBehaviorContainer = __webpack_require__(627);
 	
 	var _ScrollBehaviorContainer2 = _interopRequireDefault(_ScrollBehaviorContainer);
 	
@@ -49919,7 +49925,7 @@ require('source-map-support').install({environment: 'node'});
 	module.exports = exports['default'];
 
 /***/ }),
-/* 626 */
+/* 627 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -49930,7 +49936,7 @@ require('source-map-support').install({environment: 'node'});
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _ScrollBehavior = __webpack_require__(627);
+	var _ScrollBehavior = __webpack_require__(628);
 	
 	var _ScrollBehavior2 = _interopRequireDefault(_ScrollBehavior);
 	
@@ -50011,36 +50017,36 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ }),
-/* 627 */
+/* 628 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	exports.__esModule = true;
 	
-	var _off = __webpack_require__(628);
+	var _off = __webpack_require__(629);
 	
 	var _off2 = _interopRequireDefault(_off);
 	
-	var _on = __webpack_require__(629);
+	var _on = __webpack_require__(630);
 	
 	var _on2 = _interopRequireDefault(_on);
 	
-	var _scrollLeft = __webpack_require__(630);
+	var _scrollLeft = __webpack_require__(631);
 	
 	var _scrollLeft2 = _interopRequireDefault(_scrollLeft);
 	
-	var _scrollTop = __webpack_require__(632);
+	var _scrollTop = __webpack_require__(633);
 	
 	var _scrollTop2 = _interopRequireDefault(_scrollTop);
 	
-	var _requestAnimationFrame = __webpack_require__(633);
+	var _requestAnimationFrame = __webpack_require__(634);
 	
 	var _requestAnimationFrame2 = _interopRequireDefault(_requestAnimationFrame);
 	
-	var _Actions = __webpack_require__(634);
+	var _Actions = __webpack_require__(635);
 	
-	var _DOMStateStorage = __webpack_require__(635);
+	var _DOMStateStorage = __webpack_require__(636);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -50218,7 +50224,7 @@ require('source-map-support').install({environment: 'node'});
 	module.exports = exports['default'];
 
 /***/ }),
-/* 628 */
+/* 629 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -50240,7 +50246,7 @@ require('source-map-support').install({environment: 'node'});
 	module.exports = off;
 
 /***/ }),
-/* 629 */
+/* 630 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -50261,11 +50267,11 @@ require('source-map-support').install({environment: 'node'});
 	module.exports = on;
 
 /***/ }),
-/* 630 */
+/* 631 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
-	var getWindow = __webpack_require__(631);
+	var getWindow = __webpack_require__(632);
 	
 	module.exports = function scrollTop(node, val) {
 	  var win = getWindow(node);
@@ -50276,7 +50282,7 @@ require('source-map-support').install({environment: 'node'});
 	};
 
 /***/ }),
-/* 631 */
+/* 632 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -50286,11 +50292,11 @@ require('source-map-support').install({environment: 'node'});
 	};
 
 /***/ }),
-/* 632 */
+/* 633 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
-	var getWindow = __webpack_require__(631);
+	var getWindow = __webpack_require__(632);
 	
 	module.exports = function scrollTop(node, val) {
 	  var win = getWindow(node);
@@ -50301,7 +50307,7 @@ require('source-map-support').install({environment: 'node'});
 	};
 
 /***/ }),
-/* 633 */
+/* 634 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -50352,7 +50358,7 @@ require('source-map-support').install({environment: 'node'});
 	module.exports = compatRaf;
 
 /***/ }),
-/* 634 */
+/* 635 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -50379,7 +50385,7 @@ require('source-map-support').install({environment: 'node'});
 	var POP = exports.POP = 'POP';
 
 /***/ }),
-/* 635 */
+/* 636 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -50469,25 +50475,25 @@ require('source-map-support').install({environment: 'node'});
 	};
 
 /***/ }),
-/* 636 */
+/* 637 */
 /***/ (function(module, exports) {
 
 	module.exports = require("redux");
 
 /***/ }),
-/* 637 */
+/* 638 */
 /***/ (function(module, exports) {
 
 	module.exports = require("react-router-redux");
 
 /***/ }),
-/* 638 */
+/* 639 */
 /***/ (function(module, exports) {
 
 	module.exports = require("redux-thunk");
 
 /***/ }),
-/* 639 */
+/* 640 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -50496,7 +50502,7 @@ require('source-map-support').install({environment: 'node'});
 	  value: true
 	});
 	
-	var _utils = __webpack_require__(640);
+	var _utils = __webpack_require__(641);
 	
 	Object.defineProperty(exports, 'fetchDataOnServer', {
 	  enumerable: true,
@@ -50505,7 +50511,7 @@ require('source-map-support').install({environment: 'node'});
 	  }
 	});
 	
-	var _module = __webpack_require__(641);
+	var _module = __webpack_require__(642);
 	
 	Object.defineProperty(exports, 'reducer', {
 	  enumerable: true,
@@ -50514,7 +50520,7 @@ require('source-map-support').install({environment: 'node'});
 	  }
 	});
 	
-	var _fetchData = __webpack_require__(643);
+	var _fetchData = __webpack_require__(644);
 	
 	Object.defineProperty(exports, 'FetchData', {
 	  enumerable: true,
@@ -50526,7 +50532,7 @@ require('source-map-support').install({environment: 'node'});
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
-/* 640 */
+/* 641 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -50543,7 +50549,7 @@ require('source-map-support').install({environment: 'node'});
 	exports.flattenComponents = flattenComponents;
 	exports.fetchDataOnServer = fetchDataOnServer;
 	
-	var _module = __webpack_require__(641);
+	var _module = __webpack_require__(642);
 	
 	/**
 	 *
@@ -50623,7 +50629,7 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ }),
-/* 641 */
+/* 642 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -50637,7 +50643,7 @@ require('source-map-support').install({environment: 'node'});
 	
 	exports.handleDoneFetching = handleDoneFetching;
 	
-	var _reduxActions = __webpack_require__(642);
+	var _reduxActions = __webpack_require__(643);
 	
 	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 	
@@ -50654,13 +50660,13 @@ require('source-map-support').install({environment: 'node'});
 	exports.default = reducer;
 
 /***/ }),
-/* 642 */
+/* 643 */
 /***/ (function(module, exports) {
 
 	module.exports = require("redux-actions");
 
 /***/ }),
-/* 643 */
+/* 644 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -50676,15 +50682,15 @@ require('source-map-support').install({environment: 'node'});
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _redux = __webpack_require__(636);
+	var _redux = __webpack_require__(637);
 	
 	var _reactRedux = __webpack_require__(611);
 	
 	var _reactRouter = __webpack_require__(253);
 	
-	var _module = __webpack_require__(641);
+	var _module = __webpack_require__(642);
 	
-	var _utils = __webpack_require__(640);
+	var _utils = __webpack_require__(641);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -50764,7 +50770,7 @@ require('source-map-support').install({environment: 'node'});
 	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(FetchData);
 
 /***/ }),
-/* 644 */
+/* 645 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -50778,7 +50784,7 @@ require('source-map-support').install({environment: 'node'});
 	
 	var _isBrowser2 = _interopRequireDefault(_isBrowser);
 	
-	__webpack_require__(645);
+	__webpack_require__(646);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -50843,7 +50849,7 @@ require('source-map-support').install({environment: 'node'});
 	}
 
 /***/ }),
-/* 645 */
+/* 646 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -51070,7 +51076,7 @@ require('source-map-support').install({environment: 'node'});
 	}
 
 /***/ }),
-/* 646 */
+/* 647 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -51116,7 +51122,7 @@ require('source-map-support').install({environment: 'node'});
 	}
 
 /***/ }),
-/* 647 */
+/* 648 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -51130,11 +51136,11 @@ require('source-map-support').install({environment: 'node'});
 	
 	var _isBrowser2 = _interopRequireDefault(_isBrowser);
 	
-	var _onRouterUpdate = __webpack_require__(646);
+	var _onRouterUpdate = __webpack_require__(647);
 	
 	var _onRouterUpdate2 = _interopRequireDefault(_onRouterUpdate);
 	
-	var _ga = __webpack_require__(648);
+	var _ga = __webpack_require__(649);
 	
 	var _ga2 = _interopRequireDefault(_ga);
 	
@@ -51162,7 +51168,7 @@ require('source-map-support').install({environment: 'node'});
 	}
 
 /***/ }),
-/* 648 */
+/* 649 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -51189,7 +51195,7 @@ require('source-map-support').install({environment: 'node'});
 	};
 
 /***/ }),
-/* 649 */
+/* 650 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -51239,32 +51245,32 @@ require('source-map-support').install({environment: 'node'});
 	var static_path = 'http://' + hostname + ':' + port;
 
 /***/ }),
-/* 650 */
+/* 651 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	'use strict';exports.__esModule=true;var _graphql=__webpack_require__(651);var _graphqlRelay=__webpack_require__(652);var greetingsType=new _graphql.GraphQLObjectType({name:'Greetings',fields:function fields(){return{hello:{type:_graphql.GraphQLString,args:{message:{type:_graphql.GraphQLString}},resolve:function resolve(parentValue,_ref){var message=_ref.message;return'received: '+message;}}};}});var queryType=new _graphql.GraphQLObjectType({name:'Query',fields:function fields(){return{greetings:{type:greetingsType,resolve:function resolve(){return"";}}};}});exports.default=new _graphql.GraphQLSchema({query:queryType/* uncomment this line when you add your own mutations */// mutation: mutationType,
+	'use strict';exports.__esModule=true;var _graphql=__webpack_require__(652);var _graphqlRelay=__webpack_require__(653);var greetingsType=new _graphql.GraphQLObjectType({name:'Greetings',fields:function fields(){return{hello:{type:_graphql.GraphQLString,args:{message:{type:_graphql.GraphQLString}},resolve:function resolve(parentValue,_ref){var message=_ref.message;return'received: '+message;}}};}});var queryType=new _graphql.GraphQLObjectType({name:'Query',fields:function fields(){return{greetings:{type:greetingsType,resolve:function resolve(){return"";}}};}});exports.default=new _graphql.GraphQLSchema({query:queryType/* uncomment this line when you add your own mutations */// mutation: mutationType,
 	});
-
-/***/ }),
-/* 651 */
-/***/ (function(module, exports) {
-
-	module.exports = require("graphql");
 
 /***/ }),
 /* 652 */
 /***/ (function(module, exports) {
 
-	module.exports = require("graphql-relay");
+	module.exports = require("graphql");
 
 /***/ }),
 /* 653 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-	'use strict';var _extends2=__webpack_require__(256);var _extends3=_interopRequireDefault(_extends2);var _greetings=__webpack_require__(654);var _greetings2=_interopRequireDefault(_greetings);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}module.exports=(0,_extends3.default)({},_greetings2.default);
+	module.exports = require("graphql-relay");
 
 /***/ }),
 /* 654 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';var _extends2=__webpack_require__(256);var _extends3=_interopRequireDefault(_extends2);var _greetings=__webpack_require__(655);var _greetings2=_interopRequireDefault(_greetings);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}module.exports=(0,_extends3.default)({},_greetings2.default);
+
+/***/ }),
+/* 655 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';var _actionTypes=__webpack_require__(614);function greetings(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:[];var action=arguments[1];switch(action.type){case _actionTypes.GET_GREETING:return action.result.data.greetings;default:return state;}}module.exports={greetings:greetings};

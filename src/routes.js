@@ -19,6 +19,7 @@ import Polines from './routes/Polines';
 import Correas from './routes/Correas';
 import Estaciones from './routes/Estaciones';
 import Estacion from './routes/Estacion';
+import IngresarPolin from './routes/IngresarPolin';
 
 class App extends React.Component {
   render() {
@@ -47,6 +48,7 @@ const routes = (
     <Route path='/proyectos' component={Proyectos} />
     <Route path='/proyecto' component={Proyecto} />
     <Route path='/polines' component={Polines} />
+    <Route path='/ingresar-polin' component={IngresarPolin} />
     <Route path='/correas' component={Correas} />
     <Route path='/estaciones' component={Estaciones} />
     <Route path='/estacion' component={Estacion} />

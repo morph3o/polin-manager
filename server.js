@@ -54,7 +54,7 @@ require('source-map-support').install({environment: 'node'});
 /* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	'use strict';var _stringify=__webpack_require__(2);var _stringify2=_interopRequireDefault(_stringify);var _path=__webpack_require__(5);var _path2=_interopRequireDefault(_path);var _express=__webpack_require__(6);var _express2=_interopRequireDefault(_express);var _compression=__webpack_require__(7);var _compression2=_interopRequireDefault(_compression);var _cookieParser=__webpack_require__(8);var _cookieParser2=_interopRequireDefault(_cookieParser);var _expressGraphql=__webpack_require__(9);var _expressGraphql2=_interopRequireDefault(_expressGraphql);var _react=__webpack_require__(10);var _react2=_interopRequireDefault(_react);var _server=__webpack_require__(11);var _server2=_interopRequireDefault(_server);var _routes=__webpack_require__(175);var _routes2=_interopRequireDefault(_routes);var _reduxRouter=__webpack_require__(624);var _RubixAssetMiddleware=__webpack_require__(650);var _RubixAssetMiddleware2=_interopRequireDefault(_RubixAssetMiddleware);var _schema=__webpack_require__(651);var _schema2=_interopRequireDefault(_schema);var _reducers=__webpack_require__(654);var _reducers2=_interopRequireDefault(_reducers);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}(0,_reduxRouter.setupReducers)(_reducers2.default);var port=process.env.PORT||8080;var app=(0,_express2.default)();app.use((0,_compression2.default)());app.use((0,_cookieParser2.default)());app.use(_express2.default.static(_path2.default.join(process.cwd(),'public')));app.set('views',_path2.default.join(process.cwd(),'views'));app.set('view engine','pug');function renderHTML(req,res){(0,_reduxRouter.renderHTMLString)(_routes2.default,req,function(error,redirectLocation,data){if(error){if(error.message==='Not found'){res.status(404).send(error.message);}else{res.status(500).send(error.message);}}else if(redirectLocation){res.redirect(302,redirectLocation.pathname+redirectLocation.search);}else{res.render('index',{content:data.content,data:(0,_stringify2.default)(data.data).replace(/\//g,'\\/')});}});}app.use('/graphql',(0,_expressGraphql2.default)({schema:_schema2.default,pretty:true,graphiql:true}));app.get('*',(0,_RubixAssetMiddleware2.default)('ltr'),function(req,res,next){renderHTML(req,res);});app.listen(port,function(){console.log('Node.js app is running at http://localhost:'+port+'/');});
+	'use strict';var _stringify=__webpack_require__(2);var _stringify2=_interopRequireDefault(_stringify);var _path=__webpack_require__(5);var _path2=_interopRequireDefault(_path);var _express=__webpack_require__(6);var _express2=_interopRequireDefault(_express);var _compression=__webpack_require__(7);var _compression2=_interopRequireDefault(_compression);var _cookieParser=__webpack_require__(8);var _cookieParser2=_interopRequireDefault(_cookieParser);var _expressGraphql=__webpack_require__(9);var _expressGraphql2=_interopRequireDefault(_expressGraphql);var _react=__webpack_require__(10);var _react2=_interopRequireDefault(_react);var _server=__webpack_require__(11);var _server2=_interopRequireDefault(_server);var _routes=__webpack_require__(175);var _routes2=_interopRequireDefault(_routes);var _reduxRouter=__webpack_require__(625);var _RubixAssetMiddleware=__webpack_require__(651);var _RubixAssetMiddleware2=_interopRequireDefault(_RubixAssetMiddleware);var _schema=__webpack_require__(652);var _schema2=_interopRequireDefault(_schema);var _reducers=__webpack_require__(655);var _reducers2=_interopRequireDefault(_reducers);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}(0,_reduxRouter.setupReducers)(_reducers2.default);var port=process.env.PORT||8080;var app=(0,_express2.default)();app.use((0,_compression2.default)());app.use((0,_cookieParser2.default)());app.use(_express2.default.static(_path2.default.join(process.cwd(),'public')));app.set('views',_path2.default.join(process.cwd(),'views'));app.set('view engine','pug');function renderHTML(req,res){(0,_reduxRouter.renderHTMLString)(_routes2.default,req,function(error,redirectLocation,data){if(error){if(error.message==='Not found'){res.status(404).send(error.message);}else{res.status(500).send(error.message);}}else if(redirectLocation){res.redirect(302,redirectLocation.pathname+redirectLocation.search);}else{res.render('index',{content:data.content,data:(0,_stringify2.default)(data.data).replace(/\//g,'\\/')});}});}app.use('/graphql',(0,_expressGraphql2.default)({schema:_schema2.default,pretty:true,graphiql:true}));app.get('*',(0,_RubixAssetMiddleware2.default)('ltr'),function(req,res,next){renderHTML(req,res);});app.listen(port,function(){console.log('Node.js app is running at http://localhost:'+port+'/');});
 
 /***/ }),
 /* 2 */
@@ -19940,7 +19940,7 @@ require('source-map-support').install({environment: 'node'});
 /* 175 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	'use strict';exports.__esModule=true;var _classCallCheck2=__webpack_require__(176);var _classCallCheck3=_interopRequireDefault(_classCallCheck2);var _possibleConstructorReturn2=__webpack_require__(177);var _possibleConstructorReturn3=_interopRequireDefault(_possibleConstructorReturn2);var _inherits2=__webpack_require__(244);var _inherits3=_interopRequireDefault(_inherits2);var _react=__webpack_require__(10);var _react2=_interopRequireDefault(_react);var _classnames=__webpack_require__(252);var _classnames2=_interopRequireDefault(_classnames);var _reactRouter=__webpack_require__(253);var _rubix=__webpack_require__(254);var _sidebar=__webpack_require__(607);var _sidebar2=_interopRequireDefault(_sidebar);var _header=__webpack_require__(608);var _header2=_interopRequireDefault(_header);var _footer=__webpack_require__(609);var _footer2=_interopRequireDefault(_footer);var _Home=__webpack_require__(610);var _Home2=_interopRequireDefault(_Home);var _Proyecto=__webpack_require__(618);var _Proyecto2=_interopRequireDefault(_Proyecto);var _Proyectos=__webpack_require__(619);var _Proyectos2=_interopRequireDefault(_Proyectos);var _Polines=__webpack_require__(620);var _Polines2=_interopRequireDefault(_Polines);var _Correas=__webpack_require__(621);var _Correas2=_interopRequireDefault(_Correas);var _Estaciones=__webpack_require__(622);var _Estaciones2=_interopRequireDefault(_Estaciones);var _Estacion=__webpack_require__(623);var _Estacion2=_interopRequireDefault(_Estacion);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}/* Common Components */var App=function(_React$Component){(0,_inherits3.default)(App,_React$Component);function App(){(0,_classCallCheck3.default)(this,App);return(0,_possibleConstructorReturn3.default)(this,_React$Component.apply(this,arguments));}App.prototype.render=function render(){return _react2.default.createElement(_rubix.MainContainer,this.props,_react2.default.createElement(_sidebar2.default,null),_react2.default.createElement(_header2.default,null),_react2.default.createElement('div',{id:'body'},_react2.default.createElement(_rubix.Grid,null,_react2.default.createElement(_rubix.Row,null,_react2.default.createElement(_rubix.Col,{xs:12},this.props.children)))),_react2.default.createElement(_footer2.default,null));};return App;}(_react2.default.Component);/* Pages */var routes=_react2.default.createElement(_reactRouter.Route,{path:'/',component:App},_react2.default.createElement(_reactRouter.IndexRoute,{component:_Home2.default}),_react2.default.createElement(_reactRouter.Route,{path:'/proyectos',component:_Proyectos2.default}),_react2.default.createElement(_reactRouter.Route,{path:'/proyecto',component:_Proyecto2.default}),_react2.default.createElement(_reactRouter.Route,{path:'/polines',component:_Polines2.default}),_react2.default.createElement(_reactRouter.Route,{path:'/correas',component:_Correas2.default}),_react2.default.createElement(_reactRouter.Route,{path:'/estaciones',component:_Estaciones2.default}),_react2.default.createElement(_reactRouter.Route,{path:'/estacion',component:_Estacion2.default}));exports.default=routes;
+	'use strict';exports.__esModule=true;var _classCallCheck2=__webpack_require__(176);var _classCallCheck3=_interopRequireDefault(_classCallCheck2);var _possibleConstructorReturn2=__webpack_require__(177);var _possibleConstructorReturn3=_interopRequireDefault(_possibleConstructorReturn2);var _inherits2=__webpack_require__(244);var _inherits3=_interopRequireDefault(_inherits2);var _react=__webpack_require__(10);var _react2=_interopRequireDefault(_react);var _classnames=__webpack_require__(252);var _classnames2=_interopRequireDefault(_classnames);var _reactRouter=__webpack_require__(253);var _rubix=__webpack_require__(254);var _sidebar=__webpack_require__(607);var _sidebar2=_interopRequireDefault(_sidebar);var _header=__webpack_require__(608);var _header2=_interopRequireDefault(_header);var _footer=__webpack_require__(609);var _footer2=_interopRequireDefault(_footer);var _Home=__webpack_require__(610);var _Home2=_interopRequireDefault(_Home);var _Proyecto=__webpack_require__(618);var _Proyecto2=_interopRequireDefault(_Proyecto);var _Proyectos=__webpack_require__(619);var _Proyectos2=_interopRequireDefault(_Proyectos);var _Polines=__webpack_require__(620);var _Polines2=_interopRequireDefault(_Polines);var _Correas=__webpack_require__(621);var _Correas2=_interopRequireDefault(_Correas);var _Estaciones=__webpack_require__(622);var _Estaciones2=_interopRequireDefault(_Estaciones);var _Estacion=__webpack_require__(623);var _Estacion2=_interopRequireDefault(_Estacion);var _IngresarPolin=__webpack_require__(624);var _IngresarPolin2=_interopRequireDefault(_IngresarPolin);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}/* Pages */var App=function(_React$Component){(0,_inherits3.default)(App,_React$Component);function App(){(0,_classCallCheck3.default)(this,App);return(0,_possibleConstructorReturn3.default)(this,_React$Component.apply(this,arguments));}App.prototype.render=function render(){return _react2.default.createElement(_rubix.MainContainer,this.props,_react2.default.createElement(_sidebar2.default,null),_react2.default.createElement(_header2.default,null),_react2.default.createElement('div',{id:'body'},_react2.default.createElement(_rubix.Grid,null,_react2.default.createElement(_rubix.Row,null,_react2.default.createElement(_rubix.Col,{xs:12},this.props.children)))),_react2.default.createElement(_footer2.default,null));};return App;}(_react2.default.Component);/* Common Components */var routes=_react2.default.createElement(_reactRouter.Route,{path:'/',component:App},_react2.default.createElement(_reactRouter.IndexRoute,{component:_Home2.default}),_react2.default.createElement(_reactRouter.Route,{path:'/proyectos',component:_Proyectos2.default}),_react2.default.createElement(_reactRouter.Route,{path:'/proyecto',component:_Proyecto2.default}),_react2.default.createElement(_reactRouter.Route,{path:'/polines',component:_Polines2.default}),_react2.default.createElement(_reactRouter.Route,{path:'/ingresar-polin',component:_IngresarPolin2.default}),_react2.default.createElement(_reactRouter.Route,{path:'/correas',component:_Correas2.default}),_react2.default.createElement(_reactRouter.Route,{path:'/estaciones',component:_Estaciones2.default}),_react2.default.createElement(_reactRouter.Route,{path:'/estacion',component:_Estacion2.default}));exports.default=routes;
 
 /***/ }),
 /* 176 */
@@ -49506,7 +49506,7 @@ require('source-map-support').install({environment: 'node'});
 /* 607 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	'use strict';exports.__esModule=true;exports.default=undefined;var _classCallCheck2=__webpack_require__(176);var _classCallCheck3=_interopRequireDefault(_classCallCheck2);var _possibleConstructorReturn2=__webpack_require__(177);var _possibleConstructorReturn3=_interopRequireDefault(_possibleConstructorReturn2);var _inherits2=__webpack_require__(244);var _inherits3=_interopRequireDefault(_inherits2);var _class,_class2;var _react=__webpack_require__(10);var _react2=_interopRequireDefault(_react);var _rubix=__webpack_require__(254);var _reactRouter=__webpack_require__(253);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var ApplicationSidebar=(0,_reactRouter.withRouter)(_class=function(_React$Component){(0,_inherits3.default)(ApplicationSidebar,_React$Component);function ApplicationSidebar(){(0,_classCallCheck3.default)(this,ApplicationSidebar);return(0,_possibleConstructorReturn3.default)(this,_React$Component.apply(this,arguments));}ApplicationSidebar.prototype.handleChange=function handleChange(e){this._nav.search(e.target.value);};ApplicationSidebar.prototype.render=function render(){var _this2=this;return _react2.default.createElement('div',null,_react2.default.createElement(_rubix.Grid,null,_react2.default.createElement(_rubix.Row,null,_react2.default.createElement(_rubix.Col,{xs:12},_react2.default.createElement(_rubix.FormControl,{type:'text',placeholder:'Search...',onChange:this.handleChange.bind(this),className:'sidebar-search',style:{border:'none',background:'none',margin:'10px 0 0 0',borderBottom:'1px solid #666',color:'white'}}),_react2.default.createElement('div',{className:'sidebar-nav-container'},_react2.default.createElement(_rubix.SidebarNav,{style:{marginBottom:0},ref:function ref(c){return _this2._nav=c;}},_react2.default.createElement('div',{className:'sidebar-header'},'Menu'),_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-gauge',name:'Dashboard',href:'/'}),_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-gauge',name:'Proyectos'},_react2.default.createElement(_rubix.SidebarNav,null,_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-list-1',name:'Ver Proyectos',href:'/proyectos'}),_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-plus-squared-1',name:'Ingresar Proyecto',href:''}))),_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-gauge',name:'Estaciones'},_react2.default.createElement(_rubix.SidebarNav,null,_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-list-1',name:'Ver Estaciones',href:'/estaciones'}),_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-plus-squared-1',name:'Ingresar Estaci\xF3n',href:''}))),_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-gauge',name:'Polines'},_react2.default.createElement(_rubix.SidebarNav,null,_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-list-1',name:'Ver Polines',href:'/polines'}),_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-plus-squared-1',name:'Ingresar Polin',href:''}))),_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-gauge',name:'Correas'},_react2.default.createElement(_rubix.SidebarNav,null,_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-list-1',name:'Ver Correas',href:'/correas'}),_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-plus-squared-1',name:'Ingresar Correa',href:''}))),_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-gauge',name:'Acciones'},_react2.default.createElement(_rubix.SidebarNav,null,_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-gauge',name:'Cambiar Polin',href:''}),_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-gauge',name:'Cambiar Estacion',href:''}),_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-gauge',name:'Inspeccionar Polin',href:''}))),_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-gauge',name:'Reportes'},_react2.default.createElement(_rubix.SidebarNav,null,_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-gauge',name:'Cambios'},_react2.default.createElement(_rubix.SidebarNav,null,_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-gauge',name:'Por correa',href:''}),_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-gauge',name:'Por posici\xF3n',href:''}),_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-gauge',name:'Por tipo de pol\xEDn',href:''}))),_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-gauge',name:'Duraci\xF3n polines por \xE1rea',href:''})))))))));};return ApplicationSidebar;}(_react2.default.Component))||_class;var DummySidebar=function(_React$Component2){(0,_inherits3.default)(DummySidebar,_React$Component2);function DummySidebar(){(0,_classCallCheck3.default)(this,DummySidebar);return(0,_possibleConstructorReturn3.default)(this,_React$Component2.apply(this,arguments));}DummySidebar.prototype.render=function render(){return _react2.default.createElement(_rubix.Grid,null,_react2.default.createElement(_rubix.Row,null,_react2.default.createElement(_rubix.Col,{xs:12},_react2.default.createElement('div',{className:'sidebar-header'},'DUMMY SIDEBAR'),_react2.default.createElement(_rubix.LoremIpsum,{query:'1p'}))));};return DummySidebar;}(_react2.default.Component);var SidebarContainer=(0,_reactRouter.withRouter)(_class2=function(_React$Component3){(0,_inherits3.default)(SidebarContainer,_React$Component3);function SidebarContainer(){(0,_classCallCheck3.default)(this,SidebarContainer);return(0,_possibleConstructorReturn3.default)(this,_React$Component3.apply(this,arguments));}SidebarContainer.prototype.render=function render(){return _react2.default.createElement('div',{id:'sidebar'},_react2.default.createElement('div',{id:'avatar'},_react2.default.createElement(_rubix.Grid,null,_react2.default.createElement(_rubix.Row,{className:'fg-white'},_react2.default.createElement(_rubix.Col,{xs:4,collapseRight:true},_react2.default.createElement('img',{src:'/imgs/app/avatars/avatar0.png',width:'40',height:'40'})),_react2.default.createElement(_rubix.Col,{xs:8,collapseLeft:true,id:'avatar-col'},_react2.default.createElement('div',{style:{top:23,fontSize:16,lineHeight:1,position:'relative'}},'Anna Sanchez'),_react2.default.createElement('div',null,_react2.default.createElement(_rubix.Progress,{id:'demo-progress',value:30,color:'#ffffff'}),_react2.default.createElement('a',{href:'#'},_react2.default.createElement(_rubix.Icon,{id:'demo-icon',bundle:'fontello',glyph:'lock-5'}))))))),_react2.default.createElement(_rubix.SidebarControls,null,_react2.default.createElement(_rubix.SidebarControlBtn,{bundle:'fontello',glyph:'docs',sidebar:0}),_react2.default.createElement(_rubix.SidebarControlBtn,{bundle:'fontello',glyph:'chat-1',sidebar:1}),_react2.default.createElement(_rubix.SidebarControlBtn,{bundle:'fontello',glyph:'chart-pie-2',sidebar:2}),_react2.default.createElement(_rubix.SidebarControlBtn,{bundle:'fontello',glyph:'th-list-2',sidebar:3}),_react2.default.createElement(_rubix.SidebarControlBtn,{bundle:'fontello',glyph:'bell-5',sidebar:4})),_react2.default.createElement('div',{id:'sidebar-container'},_react2.default.createElement(_rubix.Sidebar,{sidebar:0},_react2.default.createElement(ApplicationSidebar,null)),_react2.default.createElement(_rubix.Sidebar,{sidebar:1},_react2.default.createElement(DummySidebar,null)),_react2.default.createElement(_rubix.Sidebar,{sidebar:2},_react2.default.createElement(DummySidebar,null)),_react2.default.createElement(_rubix.Sidebar,{sidebar:3},_react2.default.createElement(DummySidebar,null)),_react2.default.createElement(_rubix.Sidebar,{sidebar:4},_react2.default.createElement(DummySidebar,null))));};return SidebarContainer;}(_react2.default.Component))||_class2;exports.default=SidebarContainer;
+	'use strict';exports.__esModule=true;exports.default=undefined;var _classCallCheck2=__webpack_require__(176);var _classCallCheck3=_interopRequireDefault(_classCallCheck2);var _possibleConstructorReturn2=__webpack_require__(177);var _possibleConstructorReturn3=_interopRequireDefault(_possibleConstructorReturn2);var _inherits2=__webpack_require__(244);var _inherits3=_interopRequireDefault(_inherits2);var _class,_class2;var _react=__webpack_require__(10);var _react2=_interopRequireDefault(_react);var _rubix=__webpack_require__(254);var _reactRouter=__webpack_require__(253);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var ApplicationSidebar=(0,_reactRouter.withRouter)(_class=function(_React$Component){(0,_inherits3.default)(ApplicationSidebar,_React$Component);function ApplicationSidebar(){(0,_classCallCheck3.default)(this,ApplicationSidebar);return(0,_possibleConstructorReturn3.default)(this,_React$Component.apply(this,arguments));}ApplicationSidebar.prototype.handleChange=function handleChange(e){this._nav.search(e.target.value);};ApplicationSidebar.prototype.render=function render(){var _this2=this;return _react2.default.createElement('div',null,_react2.default.createElement(_rubix.Grid,null,_react2.default.createElement(_rubix.Row,null,_react2.default.createElement(_rubix.Col,{xs:12},_react2.default.createElement(_rubix.FormControl,{type:'text',placeholder:'Search...',onChange:this.handleChange.bind(this),className:'sidebar-search',style:{border:'none',background:'none',margin:'10px 0 0 0',borderBottom:'1px solid #666',color:'white'}}),_react2.default.createElement('div',{className:'sidebar-nav-container'},_react2.default.createElement(_rubix.SidebarNav,{style:{marginBottom:0},ref:function ref(c){return _this2._nav=c;}},_react2.default.createElement('div',{className:'sidebar-header'},'Menu'),_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-gauge',name:'Dashboard',href:'/'}),_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-gauge',name:'Proyectos'},_react2.default.createElement(_rubix.SidebarNav,null,_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-list-1',name:'Ver Proyectos',href:'/proyectos'}),_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-plus-squared-1',name:'Ingresar Proyecto',href:''}))),_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-gauge',name:'Estaciones'},_react2.default.createElement(_rubix.SidebarNav,null,_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-list-1',name:'Ver Estaciones',href:'/estaciones'}),_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-plus-squared-1',name:'Ingresar Estaci\xF3n',href:''}))),_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-gauge',name:'Polines'},_react2.default.createElement(_rubix.SidebarNav,null,_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-list-1',name:'Ver Polines',href:'/polines'}),_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-plus-squared-1',name:'Ingresar Polin',href:'/ingresar-polin'}))),_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-gauge',name:'Correas'},_react2.default.createElement(_rubix.SidebarNav,null,_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-list-1',name:'Ver Correas',href:'/correas'}),_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-plus-squared-1',name:'Ingresar Correa',href:''}))),_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-gauge',name:'Acciones'},_react2.default.createElement(_rubix.SidebarNav,null,_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-gauge',name:'Cambiar Polin',href:''}),_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-gauge',name:'Cambiar Estacion',href:''}),_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-gauge',name:'Inspeccionar Polin',href:''}))),_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-gauge',name:'Reportes'},_react2.default.createElement(_rubix.SidebarNav,null,_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-gauge',name:'Cambios'},_react2.default.createElement(_rubix.SidebarNav,null,_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-gauge',name:'Por correa',href:''}),_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-gauge',name:'Por posici\xF3n',href:''}),_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-gauge',name:'Por tipo de pol\xEDn',href:''}))),_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-gauge',name:'Duraci\xF3n polines por \xE1rea',href:''})))))))));};return ApplicationSidebar;}(_react2.default.Component))||_class;var DummySidebar=function(_React$Component2){(0,_inherits3.default)(DummySidebar,_React$Component2);function DummySidebar(){(0,_classCallCheck3.default)(this,DummySidebar);return(0,_possibleConstructorReturn3.default)(this,_React$Component2.apply(this,arguments));}DummySidebar.prototype.render=function render(){return _react2.default.createElement(_rubix.Grid,null,_react2.default.createElement(_rubix.Row,null,_react2.default.createElement(_rubix.Col,{xs:12},_react2.default.createElement('div',{className:'sidebar-header'},'DUMMY SIDEBAR'),_react2.default.createElement(_rubix.LoremIpsum,{query:'1p'}))));};return DummySidebar;}(_react2.default.Component);var SidebarContainer=(0,_reactRouter.withRouter)(_class2=function(_React$Component3){(0,_inherits3.default)(SidebarContainer,_React$Component3);function SidebarContainer(){(0,_classCallCheck3.default)(this,SidebarContainer);return(0,_possibleConstructorReturn3.default)(this,_React$Component3.apply(this,arguments));}SidebarContainer.prototype.render=function render(){return _react2.default.createElement('div',{id:'sidebar'},_react2.default.createElement('div',{id:'avatar'},_react2.default.createElement(_rubix.Grid,null,_react2.default.createElement(_rubix.Row,{className:'fg-white'},_react2.default.createElement(_rubix.Col,{xs:4,collapseRight:true},_react2.default.createElement('img',{src:'/imgs/app/avatars/avatar0.png',width:'40',height:'40'})),_react2.default.createElement(_rubix.Col,{xs:8,collapseLeft:true,id:'avatar-col'},_react2.default.createElement('div',{style:{top:23,fontSize:16,lineHeight:1,position:'relative'}},'Anna Sanchez'),_react2.default.createElement('div',null,_react2.default.createElement(_rubix.Progress,{id:'demo-progress',value:30,color:'#ffffff'}),_react2.default.createElement('a',{href:'#'},_react2.default.createElement(_rubix.Icon,{id:'demo-icon',bundle:'fontello',glyph:'lock-5'}))))))),_react2.default.createElement(_rubix.SidebarControls,null,_react2.default.createElement(_rubix.SidebarControlBtn,{bundle:'fontello',glyph:'docs',sidebar:0}),_react2.default.createElement(_rubix.SidebarControlBtn,{bundle:'fontello',glyph:'chat-1',sidebar:1}),_react2.default.createElement(_rubix.SidebarControlBtn,{bundle:'fontello',glyph:'chart-pie-2',sidebar:2}),_react2.default.createElement(_rubix.SidebarControlBtn,{bundle:'fontello',glyph:'th-list-2',sidebar:3}),_react2.default.createElement(_rubix.SidebarControlBtn,{bundle:'fontello',glyph:'bell-5',sidebar:4})),_react2.default.createElement('div',{id:'sidebar-container'},_react2.default.createElement(_rubix.Sidebar,{sidebar:0},_react2.default.createElement(ApplicationSidebar,null)),_react2.default.createElement(_rubix.Sidebar,{sidebar:1},_react2.default.createElement(DummySidebar,null)),_react2.default.createElement(_rubix.Sidebar,{sidebar:2},_react2.default.createElement(DummySidebar,null)),_react2.default.createElement(_rubix.Sidebar,{sidebar:3},_react2.default.createElement(DummySidebar,null)),_react2.default.createElement(_rubix.Sidebar,{sidebar:4},_react2.default.createElement(DummySidebar,null))));};return SidebarContainer;}(_react2.default.Component))||_class2;exports.default=SidebarContainer;
 
 /***/ }),
 /* 608 */
@@ -49610,6 +49610,12 @@ require('source-map-support').install({environment: 'node'});
 /* 624 */
 /***/ (function(module, exports, __webpack_require__) {
 
+	'use strict';exports.__esModule=true;var _classCallCheck2=__webpack_require__(176);var _classCallCheck3=_interopRequireDefault(_classCallCheck2);var _possibleConstructorReturn2=__webpack_require__(177);var _possibleConstructorReturn3=_interopRequireDefault(_possibleConstructorReturn2);var _inherits2=__webpack_require__(244);var _inherits3=_interopRequireDefault(_inherits2);var _react=__webpack_require__(10);var _react2=_interopRequireDefault(_react);var _rubix=__webpack_require__(254);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var IngresarPolin=function(_Component){(0,_inherits3.default)(IngresarPolin,_Component);function IngresarPolin(props){(0,_classCallCheck3.default)(this,IngresarPolin);var _this=(0,_possibleConstructorReturn3.default)(this,_Component.call(this,props));_this.state={id:'',tipo:'0',ancho:'',diametro:'',eje:'',conector:'0',descripcion:'',diagrama:''};return _this;}IngresarPolin.prototype.componentDidMount=function componentDidMount(){Messenger.options={extraClasses:'messenger-fixed messenger-on-bottom messenger-on-right',theme:'flat'};};IngresarPolin.prototype.handleIDChange=function handleIDChange(event){this.setState({id:event.target.value});};IngresarPolin.prototype.handleTipoChange=function handleTipoChange(event){this.setState({tipo:event.target.value});};IngresarPolin.prototype.handleAnchoChange=function handleAnchoChange(event){this.setState({ancho:event.target.value});};IngresarPolin.prototype.handleDiametroChange=function handleDiametroChange(event){this.setState({diametro:event.target.value});};IngresarPolin.prototype.handleEjeChange=function handleEjeChange(event){this.setState({eje:event.target.value});};IngresarPolin.prototype.handleConectorChange=function handleConectorChange(event){this.setState({conector:event.target.value});};IngresarPolin.prototype.handleDescripcionChange=function handleDescripcionChange(event){this.setState({descripcion:event.target.value});};IngresarPolin.prototype.handleDiagramaChange=function handleDiagramaChange(event){this.setState({diagrama:event.target.value});};IngresarPolin.prototype.onSubmit=function onSubmit(){Messenger().post({id:'info',type:'info',message:'El polin fue ingresado exitosamente!<br/>\n        id: '+this.state.id+' <br/>\n        tipo: '+this.state.tipo+' <br/>\n        ancho: '+this.state.ancho+' <br/>\n        diametro: '+this.state.diametro+' <br/>\n        eje: '+this.state.eje+' <br/>\n        conector: '+this.state.conector+' <br/>\n        descripcion: '+this.state.descripcion+'\n      ',showCloseButton:true});this.clearForm.call(this);};IngresarPolin.prototype.clearForm=function clearForm(){this.setState({id:'',tipo:'0',ancho:'',diametro:'',eje:'',conector:'0',descripcion:'',diagrama:''});};IngresarPolin.prototype.render=function render(){return _react2.default.createElement(_rubix.PanelContainer,{noOverflow:true},_react2.default.createElement(_rubix.Panel,null,_react2.default.createElement(_rubix.PanelHeader,{className:'bg-green fg-white'},_react2.default.createElement(_rubix.Grid,null,_react2.default.createElement(_rubix.Row,null,_react2.default.createElement(_rubix.Col,{xs:12},_react2.default.createElement('h3',null,'Ingresar Polin'))))),_react2.default.createElement(_rubix.PanelBody,null,_react2.default.createElement(_rubix.Grid,null,_react2.default.createElement(_rubix.Row,null,_react2.default.createElement(_rubix.Col,{xs:12},_react2.default.createElement(_rubix.Form,null,_react2.default.createElement(_rubix.FormGroup,{controlId:'id'},_react2.default.createElement(_rubix.ControlLabel,null,'ID Polin'),_react2.default.createElement(_rubix.FormControl,{readOnly:true,type:'text',placeholder:'Este id es autogenerado'})),_react2.default.createElement(_rubix.FormGroup,{controlId:'tipo'},_react2.default.createElement(_rubix.ControlLabel,null,'Tipo de Polin'),_react2.default.createElement(_rubix.FormControl,{componentClass:'select',placeholder:'select',onChange:this.handleTipoChange.bind(this),value:this.state.tipo},_react2.default.createElement('option',{value:'0'},'Selecciona el tipo de polin...'),_react2.default.createElement('option',{value:'CARGA'},'CARGA'),_react2.default.createElement('option',{value:'RETORNO'},'RETORNO'),_react2.default.createElement('option',{value:'POLEA'},'POLEA'))),_react2.default.createElement(_rubix.FormGroup,{controlId:'ancho'},_react2.default.createElement(_rubix.ControlLabel,null,'Ancho'),_react2.default.createElement(_rubix.FormControl,{type:'number',placeholder:'Ingresar ancho del polin',onChange:this.handleAnchoChange.bind(this),value:this.state.ancho}),_react2.default.createElement(_rubix.FormControl.Feedback,null),_react2.default.createElement(_rubix.HelpBlock,null,'El ancho es en mm')),_react2.default.createElement(_rubix.FormGroup,{controlId:'diametro'},_react2.default.createElement(_rubix.ControlLabel,null,'Diametro'),_react2.default.createElement(_rubix.FormControl,{type:'number',placeholder:'Ingresar diametro del polin',onChange:this.handleDiametroChange.bind(this),value:this.state.diametro}),_react2.default.createElement(_rubix.FormControl.Feedback,null),_react2.default.createElement(_rubix.HelpBlock,null,'El ancho es en mm')),_react2.default.createElement(_rubix.FormGroup,{controlId:'eje'},_react2.default.createElement(_rubix.ControlLabel,null,'Eje'),_react2.default.createElement(_rubix.FormControl,{type:'number',placeholder:'Ingresar eje del polin',onChange:this.handleEjeChange.bind(this),value:this.state.eje}),_react2.default.createElement(_rubix.FormControl.Feedback,null),_react2.default.createElement(_rubix.HelpBlock,null,'El ancho es en mm')),_react2.default.createElement(_rubix.FormGroup,{controlId:'conector'},_react2.default.createElement(_rubix.ControlLabel,null,'Conector'),_react2.default.createElement(_rubix.FormControl,{componentClass:'select',placeholder:'select',onChange:this.handleConectorChange.bind(this),value:this.state.conector},_react2.default.createElement('option',{value:'0'},'Selecciona el conector del polin...'),_react2.default.createElement('option',{value:'1'},'Ranura 32mm'),_react2.default.createElement('option',{value:'2'},'Ranura 28mm'),_react2.default.createElement('option',{value:'3'},'FALKEN'))),_react2.default.createElement(_rubix.FormGroup,{controlId:'descripcion'},_react2.default.createElement(_rubix.ControlLabel,null,'Descripci\xF3n'),_react2.default.createElement(_rubix.FormControl,{componentClass:'textarea',rows:'3',placeholder:'Ingresar description del polin',onChange:this.handleDescripcionChange.bind(this),value:this.state.descripcion})),_react2.default.createElement(_rubix.FormGroup,{controlId:'formControlsFile'},_react2.default.createElement(_rubix.ControlLabel,null,'Diagrama'),_react2.default.createElement(_rubix.FormControl,{type:'file'}),_react2.default.createElement(_rubix.HelpBlock,null,'Ingresar diagrama del polin'))))))),_react2.default.createElement(_rubix.PanelFooter,{className:'bg-darkgreen45 text-right'},_react2.default.createElement(_rubix.Grid,null,_react2.default.createElement(_rubix.Row,null,_react2.default.createElement(_rubix.Col,{xs:12},_react2.default.createElement('br',null),_react2.default.createElement('div',null,_react2.default.createElement(_rubix.Button,{outlined:true,bsStyle:'lightgreen'},'cancel'),' ',_react2.default.createElement(_rubix.Button,{outlined:true,bsStyle:'lightgreen',onClick:this.onSubmit.bind(this)},'Ingresar')),_react2.default.createElement('br',null)))))));};return IngresarPolin;}(_react.Component);exports.default=IngresarPolin;
+
+/***/ }),
+/* 625 */
+/***/ (function(module, exports, __webpack_require__) {
+
 	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -49665,35 +49671,35 @@ require('source-map-support').install({environment: 'node'});
 	
 	var _reactRouter = __webpack_require__(253);
 	
-	var _reactHotLoader = __webpack_require__(625);
+	var _reactHotLoader = __webpack_require__(626);
 	
-	var _reactRouterScroll = __webpack_require__(626);
+	var _reactRouterScroll = __webpack_require__(627);
 	
 	var _reactRouterScroll2 = _interopRequireDefault(_reactRouterScroll);
 	
 	var _reactRedux = __webpack_require__(611);
 	
-	var _redux = __webpack_require__(637);
+	var _redux = __webpack_require__(638);
 	
-	var _reactRouterRedux = __webpack_require__(638);
+	var _reactRouterRedux = __webpack_require__(639);
 	
-	var _reduxThunk = __webpack_require__(639);
+	var _reduxThunk = __webpack_require__(640);
 	
 	var _reduxThunk2 = _interopRequireDefault(_reduxThunk);
 	
-	var _reduxFetchData = __webpack_require__(640);
+	var _reduxFetchData = __webpack_require__(641);
 	
-	var _utils = __webpack_require__(641);
+	var _utils = __webpack_require__(642);
 	
-	var _onRouterSetup = __webpack_require__(645);
+	var _onRouterSetup = __webpack_require__(646);
 	
 	var _onRouterSetup2 = _interopRequireDefault(_onRouterSetup);
 	
-	var _onRouterUpdate = __webpack_require__(647);
+	var _onRouterUpdate = __webpack_require__(648);
 	
 	var _onRouterUpdate2 = _interopRequireDefault(_onRouterUpdate);
 	
-	var _checkScroll = __webpack_require__(648);
+	var _checkScroll = __webpack_require__(649);
 	
 	var _checkScroll2 = _interopRequireDefault(_checkScroll);
 	
@@ -49884,13 +49890,13 @@ require('source-map-support').install({environment: 'node'});
 	}
 
 /***/ }),
-/* 625 */
+/* 626 */
 /***/ (function(module, exports) {
 
 	module.exports = require("react-hot-loader");
 
 /***/ }),
-/* 626 */
+/* 627 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -49902,7 +49908,7 @@ require('source-map-support').install({environment: 'node'});
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _ScrollBehaviorContainer = __webpack_require__(627);
+	var _ScrollBehaviorContainer = __webpack_require__(628);
 	
 	var _ScrollBehaviorContainer2 = _interopRequireDefault(_ScrollBehaviorContainer);
 	
@@ -49925,7 +49931,7 @@ require('source-map-support').install({environment: 'node'});
 	module.exports = exports['default'];
 
 /***/ }),
-/* 627 */
+/* 628 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -49936,7 +49942,7 @@ require('source-map-support').install({environment: 'node'});
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _ScrollBehavior = __webpack_require__(628);
+	var _ScrollBehavior = __webpack_require__(629);
 	
 	var _ScrollBehavior2 = _interopRequireDefault(_ScrollBehavior);
 	
@@ -50017,36 +50023,36 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ }),
-/* 628 */
+/* 629 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	exports.__esModule = true;
 	
-	var _off = __webpack_require__(629);
+	var _off = __webpack_require__(630);
 	
 	var _off2 = _interopRequireDefault(_off);
 	
-	var _on = __webpack_require__(630);
+	var _on = __webpack_require__(631);
 	
 	var _on2 = _interopRequireDefault(_on);
 	
-	var _scrollLeft = __webpack_require__(631);
+	var _scrollLeft = __webpack_require__(632);
 	
 	var _scrollLeft2 = _interopRequireDefault(_scrollLeft);
 	
-	var _scrollTop = __webpack_require__(633);
+	var _scrollTop = __webpack_require__(634);
 	
 	var _scrollTop2 = _interopRequireDefault(_scrollTop);
 	
-	var _requestAnimationFrame = __webpack_require__(634);
+	var _requestAnimationFrame = __webpack_require__(635);
 	
 	var _requestAnimationFrame2 = _interopRequireDefault(_requestAnimationFrame);
 	
-	var _Actions = __webpack_require__(635);
+	var _Actions = __webpack_require__(636);
 	
-	var _DOMStateStorage = __webpack_require__(636);
+	var _DOMStateStorage = __webpack_require__(637);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -50224,7 +50230,7 @@ require('source-map-support').install({environment: 'node'});
 	module.exports = exports['default'];
 
 /***/ }),
-/* 629 */
+/* 630 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -50246,7 +50252,7 @@ require('source-map-support').install({environment: 'node'});
 	module.exports = off;
 
 /***/ }),
-/* 630 */
+/* 631 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -50267,11 +50273,11 @@ require('source-map-support').install({environment: 'node'});
 	module.exports = on;
 
 /***/ }),
-/* 631 */
+/* 632 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
-	var getWindow = __webpack_require__(632);
+	var getWindow = __webpack_require__(633);
 	
 	module.exports = function scrollTop(node, val) {
 	  var win = getWindow(node);
@@ -50282,7 +50288,7 @@ require('source-map-support').install({environment: 'node'});
 	};
 
 /***/ }),
-/* 632 */
+/* 633 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -50292,11 +50298,11 @@ require('source-map-support').install({environment: 'node'});
 	};
 
 /***/ }),
-/* 633 */
+/* 634 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
-	var getWindow = __webpack_require__(632);
+	var getWindow = __webpack_require__(633);
 	
 	module.exports = function scrollTop(node, val) {
 	  var win = getWindow(node);
@@ -50307,7 +50313,7 @@ require('source-map-support').install({environment: 'node'});
 	};
 
 /***/ }),
-/* 634 */
+/* 635 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -50358,7 +50364,7 @@ require('source-map-support').install({environment: 'node'});
 	module.exports = compatRaf;
 
 /***/ }),
-/* 635 */
+/* 636 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -50385,7 +50391,7 @@ require('source-map-support').install({environment: 'node'});
 	var POP = exports.POP = 'POP';
 
 /***/ }),
-/* 636 */
+/* 637 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -50475,25 +50481,25 @@ require('source-map-support').install({environment: 'node'});
 	};
 
 /***/ }),
-/* 637 */
+/* 638 */
 /***/ (function(module, exports) {
 
 	module.exports = require("redux");
 
 /***/ }),
-/* 638 */
+/* 639 */
 /***/ (function(module, exports) {
 
 	module.exports = require("react-router-redux");
 
 /***/ }),
-/* 639 */
+/* 640 */
 /***/ (function(module, exports) {
 
 	module.exports = require("redux-thunk");
 
 /***/ }),
-/* 640 */
+/* 641 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -50502,7 +50508,7 @@ require('source-map-support').install({environment: 'node'});
 	  value: true
 	});
 	
-	var _utils = __webpack_require__(641);
+	var _utils = __webpack_require__(642);
 	
 	Object.defineProperty(exports, 'fetchDataOnServer', {
 	  enumerable: true,
@@ -50511,7 +50517,7 @@ require('source-map-support').install({environment: 'node'});
 	  }
 	});
 	
-	var _module = __webpack_require__(642);
+	var _module = __webpack_require__(643);
 	
 	Object.defineProperty(exports, 'reducer', {
 	  enumerable: true,
@@ -50520,7 +50526,7 @@ require('source-map-support').install({environment: 'node'});
 	  }
 	});
 	
-	var _fetchData = __webpack_require__(644);
+	var _fetchData = __webpack_require__(645);
 	
 	Object.defineProperty(exports, 'FetchData', {
 	  enumerable: true,
@@ -50532,7 +50538,7 @@ require('source-map-support').install({environment: 'node'});
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
-/* 641 */
+/* 642 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -50549,7 +50555,7 @@ require('source-map-support').install({environment: 'node'});
 	exports.flattenComponents = flattenComponents;
 	exports.fetchDataOnServer = fetchDataOnServer;
 	
-	var _module = __webpack_require__(642);
+	var _module = __webpack_require__(643);
 	
 	/**
 	 *
@@ -50629,7 +50635,7 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ }),
-/* 642 */
+/* 643 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -50643,7 +50649,7 @@ require('source-map-support').install({environment: 'node'});
 	
 	exports.handleDoneFetching = handleDoneFetching;
 	
-	var _reduxActions = __webpack_require__(643);
+	var _reduxActions = __webpack_require__(644);
 	
 	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 	
@@ -50660,13 +50666,13 @@ require('source-map-support').install({environment: 'node'});
 	exports.default = reducer;
 
 /***/ }),
-/* 643 */
+/* 644 */
 /***/ (function(module, exports) {
 
 	module.exports = require("redux-actions");
 
 /***/ }),
-/* 644 */
+/* 645 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -50682,15 +50688,15 @@ require('source-map-support').install({environment: 'node'});
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _redux = __webpack_require__(637);
+	var _redux = __webpack_require__(638);
 	
 	var _reactRedux = __webpack_require__(611);
 	
 	var _reactRouter = __webpack_require__(253);
 	
-	var _module = __webpack_require__(642);
+	var _module = __webpack_require__(643);
 	
-	var _utils = __webpack_require__(641);
+	var _utils = __webpack_require__(642);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -50770,7 +50776,7 @@ require('source-map-support').install({environment: 'node'});
 	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(FetchData);
 
 /***/ }),
-/* 645 */
+/* 646 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -50784,7 +50790,7 @@ require('source-map-support').install({environment: 'node'});
 	
 	var _isBrowser2 = _interopRequireDefault(_isBrowser);
 	
-	__webpack_require__(646);
+	__webpack_require__(647);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -50849,7 +50855,7 @@ require('source-map-support').install({environment: 'node'});
 	}
 
 /***/ }),
-/* 646 */
+/* 647 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -51076,7 +51082,7 @@ require('source-map-support').install({environment: 'node'});
 	}
 
 /***/ }),
-/* 647 */
+/* 648 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -51122,7 +51128,7 @@ require('source-map-support').install({environment: 'node'});
 	}
 
 /***/ }),
-/* 648 */
+/* 649 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -51136,11 +51142,11 @@ require('source-map-support').install({environment: 'node'});
 	
 	var _isBrowser2 = _interopRequireDefault(_isBrowser);
 	
-	var _onRouterUpdate = __webpack_require__(647);
+	var _onRouterUpdate = __webpack_require__(648);
 	
 	var _onRouterUpdate2 = _interopRequireDefault(_onRouterUpdate);
 	
-	var _ga = __webpack_require__(649);
+	var _ga = __webpack_require__(650);
 	
 	var _ga2 = _interopRequireDefault(_ga);
 	
@@ -51168,7 +51174,7 @@ require('source-map-support').install({environment: 'node'});
 	}
 
 /***/ }),
-/* 649 */
+/* 650 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -51195,7 +51201,7 @@ require('source-map-support').install({environment: 'node'});
 	};
 
 /***/ }),
-/* 650 */
+/* 651 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -51245,32 +51251,32 @@ require('source-map-support').install({environment: 'node'});
 	var static_path = 'http://' + hostname + ':' + port;
 
 /***/ }),
-/* 651 */
+/* 652 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	'use strict';exports.__esModule=true;var _graphql=__webpack_require__(652);var _graphqlRelay=__webpack_require__(653);var greetingsType=new _graphql.GraphQLObjectType({name:'Greetings',fields:function fields(){return{hello:{type:_graphql.GraphQLString,args:{message:{type:_graphql.GraphQLString}},resolve:function resolve(parentValue,_ref){var message=_ref.message;return'received: '+message;}}};}});var queryType=new _graphql.GraphQLObjectType({name:'Query',fields:function fields(){return{greetings:{type:greetingsType,resolve:function resolve(){return"";}}};}});exports.default=new _graphql.GraphQLSchema({query:queryType/* uncomment this line when you add your own mutations */// mutation: mutationType,
+	'use strict';exports.__esModule=true;var _graphql=__webpack_require__(653);var _graphqlRelay=__webpack_require__(654);var greetingsType=new _graphql.GraphQLObjectType({name:'Greetings',fields:function fields(){return{hello:{type:_graphql.GraphQLString,args:{message:{type:_graphql.GraphQLString}},resolve:function resolve(parentValue,_ref){var message=_ref.message;return'received: '+message;}}};}});var queryType=new _graphql.GraphQLObjectType({name:'Query',fields:function fields(){return{greetings:{type:greetingsType,resolve:function resolve(){return"";}}};}});exports.default=new _graphql.GraphQLSchema({query:queryType/* uncomment this line when you add your own mutations */// mutation: mutationType,
 	});
-
-/***/ }),
-/* 652 */
-/***/ (function(module, exports) {
-
-	module.exports = require("graphql");
 
 /***/ }),
 /* 653 */
 /***/ (function(module, exports) {
 
-	module.exports = require("graphql-relay");
+	module.exports = require("graphql");
 
 /***/ }),
 /* 654 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-	'use strict';var _extends2=__webpack_require__(256);var _extends3=_interopRequireDefault(_extends2);var _greetings=__webpack_require__(655);var _greetings2=_interopRequireDefault(_greetings);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}module.exports=(0,_extends3.default)({},_greetings2.default);
+	module.exports = require("graphql-relay");
 
 /***/ }),
 /* 655 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';var _extends2=__webpack_require__(256);var _extends3=_interopRequireDefault(_extends2);var _greetings=__webpack_require__(656);var _greetings2=_interopRequireDefault(_greetings);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}module.exports=(0,_extends3.default)({},_greetings2.default);
+
+/***/ }),
+/* 656 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';var _actionTypes=__webpack_require__(614);function greetings(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:[];var action=arguments[1];switch(action.type){case _actionTypes.GET_GREETING:return action.result.data.greetings;default:return state;}}module.exports={greetings:greetings};

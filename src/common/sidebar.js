@@ -56,6 +56,7 @@ class ApplicationSidebar extends React.Component {
                   </SidebarNavItem>
                   <SidebarNavItem glyph='icon-fontello-gauge' name='Acciones'>
                     <SidebarNav>
+                      <SidebarNavItem glyph='icon-fontello-gauge' name='Ingresar Usuario' href='/ingresar-usuario' />
                       <SidebarNavItem glyph='icon-fontello-gauge' name='Cambiar Polin' href='' />
                       <SidebarNavItem glyph='icon-fontello-gauge' name='Cambiar Estacion' href='' />
                       <SidebarNavItem glyph='icon-fontello-gauge' name='Inspeccionar Polin' href='' />

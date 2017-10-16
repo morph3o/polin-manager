@@ -114,7 +114,7 @@ class IngresarUsuario extends Component {
                 <Col xs={12}>
                   <Form>
                     <FormGroup controlId='id'>
-                      <ControlLabel>ID Polin</ControlLabel>
+                      <ControlLabel>ID Usuario</ControlLabel>
                       <FormControl readOnly type='text' placeholder='Este id es autogenerado' />
                     </FormGroup>
                     <FormGroup controlId='rut'>

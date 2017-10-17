@@ -1,12 +1,12 @@
+language: node_js
+  node_js:
+    - node
+    - 6
 deploy:
   provider: heroku
   api_key:
     secure: O1IuAfWitbjITGXap5bSQSl+UeGwpF0IOajSpeOCSMSmwEXK8cxSZniPmEoVpWe0J+J6skFQ25JnY+w/ySAe4PXRCCfjthNWvimJ4Jv/82ltahZQDkznClxWaUFFoYaPjYZMvsxG1amLcHTsW7c2eXIyjhItwuv/lySuuMMxZjxGyMHGpxV59oHm8ChTOMWuAAyf83EoLY759qK0WRODIrLheyu3kyJZz33RSN3oJLill0houlaPE5aPuyP7VM05T16urFbgtVeef8thDSbHLFveFh1ODI6XjW7HSBZEW5eYCIJCdur0LHLr/Jytl8Qa6UIE/Mp8iTqEVptYmlnNzTn4PSGJJ17NDtUOnQ6WA/bi75k2c9GbmQCqpKsUmUWGEmAdkV2Kt1piXKSCThp3hdFjHwyh732vgzE3XE6kH7z9QVGN0b92Xf0xQgkt5b4Xz0CikVsKWyRPwZrzt2FUZBEMufwYrlhL0W1F+KBppwCaXI2D/3JduOrvgnWUWCUUG9Px6uKkBaVqPVULLatTajrnZwxYfKUEjATXmozr97CpxlR8kppDIHiRBO5mimiHM1kG/P3u4fHTW76RXf79huCW+VU2lBG6PS+M38U63uA0O0HB+qnEeSRcMmDFLJKtRbKdXhPYbGOOkhBwOUeWk/rre8vgDO0t6NUV7AZ6Lng=
   app: polin-manager
   on: master
-  language: node_js
-  node_js:
-    - node
-    - 6
-  install:
-    - npm run-script build:prod -s
+install:
+  - npm run-script build:prod -s

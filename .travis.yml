@@ -6,7 +6,8 @@ deploy:
   api_key:
     secure: EUIEKqTO7NB8YoC9cy6C8hrf29lLnmrzxpLmtja5AWoP12eyD+GtHHLFn3XCc1KChBYL9ebGWEXI1NS0q97hHJXuuwEWdcpBISXM/AtxusqmFv40qQuywyHR1ySxoYaGBsag6I5WjPNlgqzNbiTBPhotnNVYHoISOMWXPZ/NCXOOfacBPIdIjqfrJqruOLrcQ9MT0pOTyY+6PCvMNFmRmOHMG86KKI8V5UgD3e3inTyxswu27nWeZUf6zxZEm2EA3iYRQMJobQB7VHxG7zrj16Dquc+rrtBIlzBY3u1kr8zInJujVN7hEWfJ1avUBKp55hpZrsep8/DViI0g4wXomXuB7C7uMBKE+CeVQuh0xZEQ+FCJnTyaMyPJ2xXK0uptiLyGl0U330EX/PkX1HhPpJI4CXS1N81EE3uPu6kfxSFv4ocI1BeXBcawmw24urlXzwvB+r46Kb8TpO+wRlPG41W2LvaiJUneLt3Qo3pIH6myYUOwgIIoo8C84LecksWF/NXAIXrBkUIMoBBrWhL6381Y9KXrM26YCXDH6eMAjvd9DMvcM2NMuu8sTuqVXAKsWBDcBHo8MUPutIq1PSxADq/2l4CSTttmxHDo7wxxJViCtVqMhoWOmUKxeZjDr9QCO1rgO05nQy0OJmY551D6Kma7OvRJTPWVDxQghV8Ha+E=
   app: polin-manager
-  run:
+  strategy: git
+  before_deploy:
     - npm install -g bower
     - bower install
     - npm run-script build:prod -s

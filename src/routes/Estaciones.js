@@ -24,7 +24,7 @@ export default class Estaciones extends React.Component {
             <Grid>
               <Row>
                 <Col xs={12}>
-                  <PageHeader>Estaciones</PageHeader>
+                  <PageHeader>Estaciones!</PageHeader>
                 </Col>
               </Row>
               <Row>

@@ -6,6 +6,7 @@ deploy:
   on: master
   language: node_js
   node_js:
+    - node
     - 6
   install:
     - npm run-script build:prod -s

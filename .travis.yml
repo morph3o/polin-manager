@@ -1,6 +1,5 @@
 language: node_js
 node_js:
-  - node
   - 6
 deploy:
   provider: heroku
@@ -10,4 +9,6 @@ deploy:
   on: master
 install:
   - npm install
+  - npm install -g bower
+  - bower install
   - npm run-script build:prod -s

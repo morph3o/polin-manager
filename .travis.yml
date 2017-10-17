@@ -9,4 +9,5 @@ deploy:
   app: polin-manager
   on: master
 install:
+  - npm install
   - npm run-script build:prod -s

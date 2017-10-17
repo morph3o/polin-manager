@@ -11,3 +11,6 @@ install:
   - npm install -g bower
   - bower install
   - npm run-script build:prod -s
+after_install:
+  - git add public
+  - git add server.js server.js.map

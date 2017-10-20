@@ -13,7 +13,7 @@ commit_website_files() {
 
 upload_files() {
   git remote add origin-heroku https://${GH_TOKEN}@github.com/morph3o/polin-manager.git > /dev/null 2>&1
-  git push --set-upstream origin-heroku heroku
+  git push --set-upstream origin-heroku heroku --force
 }
 
 setup_git

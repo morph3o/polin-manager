@@ -22,6 +22,7 @@ import Estacion from './routes/Estacion';
 import IngresarPolin from './routes/IngresarPolin';
 import IngresarUsuario from './routes/IngresarUsuario';
 import IngresarPolinProveedor from './routes/IngresarPolinProveedor';
+import IngresarEstacionProveedor from './routes/IngresarEstacionProveedor';
 
 class App extends React.Component {
   render() {
@@ -56,6 +57,7 @@ const routes = (
     <Route path='/estacion' component={Estacion} />
     <Route path='/ingresar-usuario' component={IngresarUsuario} />
     <Route path='/ingresar-polin-proveedor' component={IngresarPolinProveedor} />
+    <Route path='/ingresar-estacion-proveedor' component={IngresarEstacionProveedor} />
   </Route>
 );
 

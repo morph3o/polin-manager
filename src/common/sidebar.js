@@ -34,6 +34,7 @@ class ApplicationSidebar extends React.Component {
                     <SidebarNav>
                       <SidebarNavItem glyph='icon-fontello-list-1' name='Ver Proyectos' href='/proyectos' />
                       <SidebarNavItem glyph='icon-fontello-plus-squared-1' name='Ingresar Proyecto' href='/ingresar-proyecto' />
+                      <SidebarNavItem glyph='icon-fontello-plus-squared-1' name='Ingresar Correa Proyecto' href='/ingresar-correa-proyecto' />
                     </SidebarNav>
                   </SidebarNavItem>
                   <SidebarNavItem glyph='icon-fontello-gauge' name='Estaciones'>

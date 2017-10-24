@@ -24,6 +24,7 @@ import IngresarUsuario from './routes/IngresarUsuario';
 import IngresarPolinProveedor from './routes/IngresarPolinProveedor';
 import IngresarEstacionProveedor from './routes/IngresarEstacionProveedor';
 import IngresarEstacion from './routes/IngresarEstacion';
+import IngresarProyecto from "./routes/IngresarProyecto";
 
 class App extends React.Component {
   render() {
@@ -56,6 +57,7 @@ const routes = (
     <Route path='/correas' component={Correas} />
     <Route path='/estaciones' component={Estaciones} />
     <Route path='/estacion' component={Estacion} />
+    <Route path='/ingresar-proyecto' component={IngresarProyecto} />
     <Route path='/ingresar-usuario' component={IngresarUsuario} />
     <Route path='/ingresar-estacion' component={IngresarEstacion} />
     <Route path='/ingresar-polin-proveedor' component={IngresarPolinProveedor} />
